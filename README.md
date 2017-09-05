@@ -39,6 +39,8 @@ _will add links to all packages in time_
 
 #### Symlinking
 
+[_a useful guide for explaining symlinks with stow_](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html)
+
 - install gnu stow to allow simple symlinks
 
 - put config files into a single (git) folder in the structure above
