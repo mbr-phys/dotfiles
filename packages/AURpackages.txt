@@ -1,0 +1,13 @@
+bluez-alsa-git
+dotfiles
+hal-flash
+i3-gaps-next-git
+light-git
+oh-my-zsh-git
+package-query
+shutter
+spotify
+telegram-desktop-bin
+texlive-localmanager-git
+ttf-font-awesome
+yaourt
