@@ -1,0 +1,6 @@
+#!/bin/bash
+
+import -window root ~/.ttg.png
+convert ~/.ttg.png -blur 0x4 ~/.ttg.png
+i3lock -i ~/.ttg.png
+rm ~/.ttg.png
