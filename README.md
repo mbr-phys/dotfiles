@@ -2,6 +2,8 @@
 
 Most of this has been taken from a friend's configs and then customised for my own preferences, some stuff also just from across the internet
 
+_will add links to all packages in time_
+
 ---
 
 #### general windows management
