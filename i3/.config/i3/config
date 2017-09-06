@@ -6,23 +6,25 @@
 #   colors
 #   bar
 
-# GENERAL #######################
+# vim:filetype=i3
 
 set $mod Mod4
 
+exec compton -b --xrender-sync --xrender-sync-fence
+exec --no-startup-id dunst
+exec_always --no-startup-id feh --randomize --bg-fill ~/dotfiles/backgrounds/
+
+# GENERAL #######################
+
 font xft:Overpass 9
 hide_edge_borders both
-
-# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-exec --no-startup-id dunst
-
-# start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
-
-# kill focused window
 bindsym $mod+q kill
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
@@ -31,7 +33,6 @@ bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
-exec_always --no-startup-id feh --randomize --bg-fill ~/dotfiles/backgrounds/wallpaper*
 
 bindsym $mod+p mode "power"
 mode "power" {
@@ -43,7 +44,16 @@ mode "power" {
     bindsym Escape mode "default"
 }
 
-##########################################
+
+
+
+
+
+
+
+
+
+
 
 # WORKSPACE SETTINGS #######################
 
@@ -58,10 +68,6 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
-
-#navigate workspaces next / previous
-bindsym $mod+Tab workspace next
-bindsym $mod+shift+Tab workspace prev
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -87,18 +93,49 @@ bindsym $mod+Ctrl+8 move container to workspace 8; workspace 8
 bindsym $mod+Ctrl+9 move container to workspace 9; workspace 9
 bindsym $mod+Ctrl+0 move container to workspace 10; workspace 10
 
-##############################################
+bindsym $mod+Tab workspace next
+bindsym $mod+shift+Tab workspace prev
 
-# CONFIG SETTINGS ##############################
+bindsym $mod+Ctrl+Left  move workspace to output left
+bindsym $mod+Ctrl+Right move workspace to output right
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-#################################################
+
+
+
+
+
+# PROGRAM SETTINGS ###############################
+
+for_window [title="alsamixer"] floating enable border pixel 0
+for_window [class="GParted"] floating enable
+for_window [class="URxvt" instance="floatingterm"] floating enable
+
+for_window [class="Atom"] move to workspace 2
+for_window [class="Telegram"] move to workspace 5
+for_window [class="Spotify"] move to workspace 6
+
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+s exec env firefox; exec atom; exec spotify
+bindsym $mod+a mode "launcher"
+
+mode "launcher" {
+    bindsym f exec env firefox, mode "default"
+    bindsym a exec atom, mode "default"
+    bindsym s exec spotify, mode "default"
+    bindsym t exec telegram-desktop, mode "default"
+    bindsym p exec urxvt -geometry 110x12-0-25 -name "floatingterm" -e pulsemixer, mode "default"
+    bindsym n exec urxvt -geometry 90x35-0-25 -name "floatingterm" -e nmtui, mode "default"
+    bindsym r exec urxvt -e ranger, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+
+
+
+
 
 # WINDOW SETTINGS ###############################
 
@@ -178,26 +215,11 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-for_window [class="^.*"] border pixel 0
-
 gaps inner 12
 gaps outer 5
 
+for_window [class="^.*"] border pixel 0
 
-# PROGRAM SETTINGS ###############################
-
-for_window [title="alsamixer"] floating enable border pixel 0
-for_window [class="GParted"] floating enable border normal
-#for_window [class="(?i)urxvt"] floating enable border normal
-
-bindsym $mod+d exec rofi -show drun
-bindsym $mod+f exec env firefox
-bindsym $mod+a exec atom
-bindsym $mod+s exec env GTK_THEME=Adwaita:light firefox; exec atom; exec spotify
-
-#for_window [class="(?i)Atom"] move to workspace 3
-#for_window [class="Telegram"] move to workspace 9
-#for_window [class="Spotify"] move to workspace 10
 
 ##################################################
 
