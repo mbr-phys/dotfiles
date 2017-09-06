@@ -2,6 +2,8 @@ bluez-alsa-git
 dotfiles
 hal-flash
 i3-gaps-next-git
+i3blocks-gaps-git
+i3lock-color-git
 light-git
 oh-my-zsh-git
 package-query

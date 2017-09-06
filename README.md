@@ -2,22 +2,20 @@
 
 Most of this has been taken from a friend's configs and then customised for my own preferences, some stuff also just from across the internet
 
-_will add links to all packages in time_
-
 ---
 
 #### general windows management
 
 * [i3-gaps](https://github.com/Airblader/i3) - fork of i3 windows manager that incorporates gaps
-* i3blocks
-* i3lock
+* [i3blocks-gaps](https://github.com/Airblader/i3blocks-gaps) - fork of i3blocks to work with i3-gaps
+* [i3lock-color](https://github.com/chrjguill/i3lock-color) - i3lock with more customisation
 
 #### fonts and colouring
 
-* mixture of gruvbox and base16-tomorrow-night
+* mixture of [gruvbox](https://github.com/morhetz/gruvbox) and base16-tomorrow-night
 * gtk theme
-* regular font in use is overpass
-* font used for terminal is hack
+* regular font - [overpass](http://overpassfont.org/)
+* terminal font - [hack](https://sourcefoundry.org/hack/)
 
 #### browser
 
@@ -25,15 +23,21 @@ _will add links to all packages in time_
 
 #### terminal
 
-* emulator is urxvt, shell is zsh
-* shell prompt is gallifrey theme, would use agnoster's but can't get it to work?
+* emulator is [urxvt](https://wiki.archlinux.org/index.php/Rxvt-unicode), shell is [zsh](https://wiki.archlinux.org/index.php/zsh)
+* shell prompt is [gallifrey theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes), would use agnoster's but can't get it to work?
 
 #### utilities
 
-* editors - both atom and vim installed, mainly using atom
-* pdf viewer - zathura, also using firefox and atom sometimes
-* notifications - dunst
-* launcher - rofi
+* editors - [atom](https://atom.io/) and vim installed, mainly using atom
+* pdf viewer - [zathura](https://pwmt.org/projects/zathura/), also using firefox and atom sometimes
+* notifications - [dunst](https://dunst-project.org/)
+* launcher - [rofi](https://davedavenport.github.io/rofi/)
+
+#### packages
+
+* for a recorded list of all installed packages:
+	- `pacman -Qqen > ~/dotfiles/packages/packages.txt` for [official Arch](https://www.archlinux.org/packages/) packages
+	- `pacman -Qqem > ~/dotfiles/packages/AURpackages.txt` for [AUR packages](https://aur.archlinux.org/)
 
 ---
 

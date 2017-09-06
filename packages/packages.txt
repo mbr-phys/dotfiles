@@ -45,8 +45,6 @@ groff
 gvim
 gzip
 htop
-i3blocks
-i3lock
 i3status
 imagemagick
 inetutils
@@ -99,6 +97,7 @@ s-nail
 sed
 shadow
 source-highlight
+stow
 sudo
 sysfsutils
 systemd-sysvcompat
@@ -124,6 +123,7 @@ texlive-publishers
 texlive-science
 thunar
 tmux
+ttf-hack
 unrar
 usbutils
 util-linux
