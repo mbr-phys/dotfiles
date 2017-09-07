@@ -120,7 +120,7 @@ bindsym $mod+s exec env GTK_THEME=Adwaita:dark firefox; exec atom; exec spotify
 bindsym $mod+a mode "launcher"
 
 mode "launcher" {
-    bindsym f exec env firefox
+    bindsym f exec env firefox, mode "default"
     bindsym a exec atom, mode "default"; workspace 2
     bindsym s exec spotify, mode "default"; workspace 6
     bindsym t exec telegram-desktop, mode "default"; workspace 5
