@@ -1,10 +1,10 @@
 set statusbar-bg "#282828"
-set statusbar-fg "#fbf7ef"
+set statusbar-fg "#e1ded7"
 
 set font "Overpass 10"
 
 set recolor-lightcolor "#282828"
-set recolor-darkcolor "#fbf7ef"
+set recolor-darkcolor "#e1ded7"
 
 set selection-clipboard clipboard
 

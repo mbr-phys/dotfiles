@@ -75,9 +75,9 @@ URxvt*mouseWheelScrollPage:     false
 URxvt*cursorBlink:              true
 URxvt*saveLines:                5000
 
-URxvt.foreground:   fg
-URxvt.background:   #000000
-URxvt.cursorColor:  fg
+URxvt.cursorColor:          #e1ded7
+URxvt.background:           #282828
+URxvt.foreground:           #e1ded7
 
 URxvt.color0:       bg
 URxvt.color1:       red
@@ -95,4 +95,4 @@ URxvt.color11:      base02
 URxvt.color12:      base04
 URxvt.color13:      base06
 URxvt.color14:      base0F
-URxvt.color15:  	  base07
+URxvt.color15		base07
