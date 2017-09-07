@@ -111,20 +111,20 @@ for_window [title="alsamixer"] floating enable border pixel 0
 for_window [class="GParted"] floating enable
 for_window [class="URxvt" instance="floatingterm"] floating enable
 
-for_window [class="Atom"] move to workspace 2
+#for_window [class="Atom"] move to workspace 2
 for_window [class="Telegram"] move to workspace 5
 for_window [class="Spotify"] move to workspace 6
 
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+s exec env firefox; exec atom; exec spotify
+bindsym $mod+s exec env GTK_THEME=Adwaita:dark firefox; exec atom; exec spotify
 bindsym $mod+a mode "launcher"
 
 mode "launcher" {
-    bindsym f exec env firefox, mode "default"
-    bindsym a exec atom, mode "default"
-    bindsym s exec spotify, mode "default"
-    bindsym t exec telegram-desktop, mode "default"
-    bindsym p exec urxvt -geometry 110x12-0-25 -name "floatingterm" -e pulsemixer, mode "default"
+    bindsym f exec env firefox
+    bindsym a exec atom, mode "default"; workspace 2
+    bindsym s exec spotify, mode "default"; workspace 6
+    bindsym t exec telegram-desktop, mode "default"; workspace 5
+    bindsym p exec urxvt -geometry 110x12-0-25 -name "floatingterm" -e alsamixer, mode "default"
     bindsym n exec urxvt -geometry 90x35-0-25 -name "floatingterm" -e nmtui, mode "default"
     bindsym r exec urxvt -e ranger, mode "default"
 
@@ -216,7 +216,7 @@ mode "resize" {
 }
 
 gaps inner 12
-gaps outer 5
+gaps outer 4
 
 for_window [class="^.*"] border pixel 0
 
