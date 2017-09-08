@@ -44,7 +44,15 @@ mode "power" {
     bindsym Escape mode "default"
 }
 
+bindsym $mod+m mode "music"
+mode "music" {
+    bindsym space exec playerctl play-pause
+    bindsym n     exec playerctl next
+    bindsym b     exec playerctl previous
 
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 
 
