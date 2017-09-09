@@ -124,7 +124,7 @@ for_window [class="Telegram"] move to workspace 5
 for_window [class="Spotify"] move to workspace 6
 
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+s exec env GTK_THEME=Adwaita:dark firefox; exec atom; exec spotify
+bindsym $mod+s exec env firefox; exec atom; exec spotify
 bindsym $mod+a mode "launcher"
 
 mode "launcher" {
