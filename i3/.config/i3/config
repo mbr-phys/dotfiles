@@ -119,7 +119,7 @@ for_window [title="alsamixer"] floating enable border pixel 0
 for_window [class="GParted"] floating enable
 for_window [class="URxvt" instance="floatingterm"] floating enable
 
-#for_window [class="Atom"] move to workspace 2
+for_window [class="Atom"] move to workspace 2
 for_window [class="Telegram"] move to workspace 5
 for_window [class="Spotify"] move to workspace 6
 
