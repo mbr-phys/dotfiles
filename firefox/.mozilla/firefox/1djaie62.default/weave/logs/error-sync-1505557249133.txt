@@ -1,0 +1,246 @@
+1505557239134	Sync.Service	INFO	Loading Weave 1.57.0
+1505557239137	Sync.Engine.Clients	DEBUG	Engine initialized
+1505557239138	Sync.Engine.Clients	DEBUG	Resetting clients last sync time
+1505557239145	Sync.Engine.Bookmarks	DEBUG	Engine initialized
+1505557239148	Sync.Engine.Forms	DEBUG	Engine initialized
+1505557239151	Sync.Engine.History	DEBUG	Engine initialized
+1505557239154	Sync.Engine.Passwords	DEBUG	Engine initialized
+1505557239157	Sync.Engine.Prefs	DEBUG	Engine initialized
+1505557239160	Sync.Engine.Tabs	DEBUG	Engine initialized
+1505557239160	Sync.Engine.Tabs	DEBUG	Resetting tabs last sync time
+1505557239165	Sync.Engine.Addons	DEBUG	Engine initialized
+1505557239168	Sync.Engine.Extension-Storage	DEBUG	Engine initialized
+1505557239169	Sync.Service	INFO	Mozilla/5.0 (X11; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0
+1505557239171	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1505557239171	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1505557239171	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1505557239172	Sync.AddonsReconciler	INFO	Registering as Add-on Manager listener.
+1505557239172	Sync.AddonsReconciler	DEBUG	Adding change listener.
+1505557239172	Sync.Tracker.History	INFO	Adding Places observer.
+1505557239180	Sync.Tracker.Bookmarks	DEBUG	migrateOldEntries: Missing bookmarks tracker file; skipping migration
+1505557239181	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1505557243182	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1505557243186	Sync.Service	DEBUG	User-Agent: Firefox/55.0.3 (Linux x86_64) FxSync/1.57.0.20170826053331.desktop
+1505557243187	Sync.Service	INFO	Starting sync at 2017-09-16 11:20:43 in browser session CJTr3vlEP4ua
+1505557243187	Sync.Service	DEBUG	In sync: should login.
+1505557243188	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1505557243188	Sync.Service	INFO	Logging in the user.
+1505557243190	Sync.BrowserIDManager	INFO	Waiting for user to be verified.
+1505557243190	FirefoxAccounts	DEBUG	already verified
+1505557243190	Sync.BrowserIDManager	INFO	Starting fetch for key bundle.
+1505557243190	FirefoxAccounts	DEBUG	already verified
+1505557243191	Sync.BrowserIDManager	INFO	Getting an assertion from: https://token.services.mozilla.com/1.0/sync/1.5
+1505557243191	FirefoxAccounts	DEBUG	enter getAssertion()
+1505557243200	FirefoxAccounts	DEBUG	got keyPair
+1505557243200	FirefoxAccounts	DEBUG	getCertificateSigned: true true
+1505557243203	Services.Common.RESTRequest	TRACE	local time, offset: 1505557243203, 0
+1505557243204	Services.Common.RESTRequest	TRACE	hawk auth header: Hawk id="6227a8f95eca4ec6a4c72173300b8cfff93b87d691b49805bf5d70a203d21219", ts="1505557243", nonce="HUtfa/8X9ME=", hash="n9dlQ+oMdwOncIvSusG+yshoWAJMhADk8Nqb01EXTyE=", mac="QdfXTzGZrunFWLr0tkskvW2SDFTPCZH15HCJ08NhZcE="
+1505557243205	Services.Common.RESTRequest	DEBUG	POST request to https://api.accounts.firefox.com/v1/certificate/sign
+1505557243205	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1505557243205	Services.Common.RESTRequest	TRACE	HTTP Header content-type: application/json
+1505557243205	Services.Common.RESTRequest	TRACE	HTTP Header accept-language: en-US, en
+1505557243205	Services.Common.RESTRequest	DEBUG	POST Length: 888
+1505557243205	Services.Common.RESTRequest	TRACE	POST Body: {"publicKey":{"algorithm":"DS","y":"16595667B9BA297F64DB830CA200F696834C02DD190CCA49D800B474B46B1D63F47E93BA8625F0E7DB85BA0D0F1EFB99D8FEB15DA8C22E07BEA841DD3371B3F616E3C611FF89C10C9F603155CBADC7B691D14FC9043DA1A03E7B35DBD10BB0187D25B2CC9FD666954076D5B4A902AB3AFD2E906AABF72F7BE9200C06F11F2E57","p":"FF600483DB6ABFC5B45EAB78594B3533D550D9F1BF2A992A7A8DAA6DC34F8045AD4E6E0C429D334EEEAAEFD7E23D4810BE00E4CC1492CBA325BA81FF2D5A5B305A8D17EB3BF4A06A349D392E00D329744A5179380344E82A18C47933438F891E22AEEF812D69C8F75E326CB70EA000C3F776DFDBD604638C2EF717FC26D02E17","q":"E21E04F911D1ED7991008ECAAB3BF775984309C3","g":"C52A4A0FF3B7E61FDF1867CE84138369A6154F4AFA92966E3C827E25CFA6CF508B90E5DE419E1337E07A2E9E2A3CD5DEA704D175F8EBF6AF397D69E110B96AFB17C7A03259329E4829B0D03BBC7896B15B4ADE53E130858CC34D96269AA89041F409136C7242A38895C9D5BCCAD4F389AF1D7A4BD1398BD072DFFA896233397A"},"duration":21600000}
+1505557243941	Services.Common.RESTRequest	TRACE	onStartRequest: POST https://api.accounts.firefox.com/v1/certificate/sign
+1505557243943	Services.Common.RESTRequest	TRACE	Channel for POST https://api.accounts.firefox.com/v1/certificate/sign returned status code 0
+1505557243943	Services.Common.RESTRequest	DEBUG	POST https://api.accounts.firefox.com/v1/certificate/sign 200
+1505557243943	Services.Common.RESTRequest	TRACE	POST body: {"cert":"eyJhbGciOiJSUzI1NiJ9.eyJwdWJsaWMta2V5Ijp7ImFsZ29yaXRobSI6IkRTIiwieSI6IjE2NTk1NjY3QjlCQTI5N0Y2NERCODMwQ0EyMDBGNjk2ODM0QzAyREQxOTBDQ0E0OUQ4MDBCNDc0QjQ2QjFENjNGNDdFOTNCQTg2MjVGMEU3REI4NUJBMEQwRjFFRkI5OUQ4RkVCMTVEQThDMjJFMDdCRUE4NDFERDMzNzFCM0Y2MTZFM0M2MTFGRjg5QzEwQzlGNjAzMTU1Q0JBREM3QjY5MUQxNEZDOTA0M0RBMUEwM0U3QjM1REJEMTBCQjAxODdEMjVCMkNDOUZENjY2OTU0MDc2RDVCNEE5MDJBQjNBRkQyRTkwNkFBQkY3MkY3QkU5MjAwQzA2RjExRjJFNTciLCJwIjoiRkY2MDA0ODNEQjZBQkZDNUI0NUVBQjc4NTk0QjM1MzNENTUwRDlGMUJGMkE5OTJBN0E4REFBNkRDMzRGODA0NUFENEU2RTBDNDI5RDMzNEVFRUFBRUZEN0UyM0Q0ODEwQkUwMEU0Q0MxNDkyQ0JBMzI1QkE4MUZGMkQ1QTVCMzA1QThEMTdFQjNCRjRBMDZBMzQ5RDM5MkUwMEQzMjk3NDRBNTE3OTM4MDM0NEU4MkExOEM0NzkzMzQzOEY4OTFFMjJBRUVGODEyRDY5QzhGNzVFMzI2Q0I3MEVBMDAwQzNGNzc2REZEQkQ2MDQ2MzhDMkVGNzE3RkMyNkQwMkUxNyIsInEiOiJFMjFFMDRGOTExRDFFRDc5OTEwMDhFQ0FBQjNCRjc3NTk4NDMwOUMzIiwiZyI6IkM1MkE0QTBGRjNCN0U2MUZERjE4NjdDRTg0MTM4MzY5QTYxNTRGNEFGQTkyOTY2RTNDODI3RTI1Q0ZBNkNGNTA4QjkwRTVERTQxOUUxMzM3RTA3QTJFOUUyQTNDRDVERUE3MDREMTc1RjhFQkY2QUYzOTdENjlFMTEwQjk2QUZCMTdDN0EwMzI1OTMyOUU0ODI5QjBEMDNCQkM3ODk2QjE1QjRBREU1M0UxMzA4NThDQzM0RDk2MjY5QUE4OTA0MUY0MDkxMzZDNzI0MkEzODg5NUM5RDVCQ0NBRDRGMzg5QUYxRDdBNEJEMTM5OEJEMDcyREZGQTg5NjIzMzM5N0EifSwicHJpbmNpcGFsIjp7ImVtYWlsIjoiYmQ0Njg1MzFkNTQwNGZiNmFjYmFiZGFhMmY4OGI2MjJAYXBpLmFjY291bnRzLmZpcmVmb3guY29tIn0sImlhdCI6MTUwNTU1NzIzMzgzNywiZXhwIjoxNTA1NTc4ODQzODM3LCJmeGEtZ2VuZXJhdGlvbiI6MTQ4NzYzNDM4NTQyNSwiZnhhLWxhc3RBdXRoQXQiOjE1MDU1MTU0OTUsImZ4YS12ZXJpZmllZEVtYWlsIjoibWF0dGhld3Jvc3NldHRlckBnbWFpbC5jb20iLCJmeGEtZGV2aWNlSWQiOiI0MWEzMWZmNWJhNmMyNDQzNjQ2YjA4YjM1Yjc2ZjQxMyIsImZ4YS10b2tlblZlcmlmaWVkIjp0cnVlLCJpc3MiOiJhcGkuYWNjb3VudHMuZmlyZWZveC5jb20ifQ.kzKu-kbFSbyhISvVA5g8lwmoDJoRoPc0Idb59lWUx3kjSBwsT4XYCoSPefgwPU-8w6TmilxH1AzJ3ldE-dQ8OeeZqzv8rCLT-mIppbIGvyEt2uILIYmoDBlrWHUPJuuVt8QUGD19XTUHsdeGMvRlsxPz_URTQA8FTSxsA27bFNWdPF555pI1-U7a8J8BV30tvRTlySnlsfy2ClzosejfDJkAda1zL4pL1XESj7OfEQfSasJLwR59B-cLTIcVK3w9Hs-tAmE8I56xVtbIHSL0hFdZJi2MAfEcmY3YoYH0UXC0qSYqpfOXT8GmkymYcDxpMdX8UXwS9r-j8K5R92I4vQ"}
+1505557243946	Hawk	DEBUG	(Response) /certificate/sign: code: 200 - Status text: OK
+1505557243948	Hawk	DEBUG	Clock offset vs https://api.accounts.firefox.com/v1: -948
+1505557243952	FirefoxAccounts	DEBUG	getCertificate got a new one: true
+1505557243953	FirefoxAccounts	DEBUG	_updateAccountData with items: ["keyPair","cert"]
+1505557243954	FirefoxAccounts	DEBUG	writing plain storage: ["email","sessionToken","uid","verified","deviceId","deviceRegistrationVersion","oauthTokens","profileCache"]
+1505557243958	FirefoxAccounts	DEBUG	getAssertionFromCert
+1505557243960	FirefoxAccounts	DEBUG	getAssertionFromCert returning signed: true
+1505557243961	Sync.BrowserIDManager	DEBUG	Getting a token
+1505557243961	Common.TokenServerClient	DEBUG	Beginning BID assertion exchange: https://token.services.mozilla.com/1.0/sync/1.5
+1505557243962	Services.Common.RESTRequest	DEBUG	GET request to https://token.services.mozilla.com/1.0/sync/1.5
+1505557243962	Services.Common.RESTRequest	TRACE	HTTP Header accept: application/json
+1505557243963	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1505557243963	Services.Common.RESTRequest	TRACE	HTTP Header x-client-state: 0e233d1e9ce4e7ea415a44a39fc0d563
+1505557243973	FirefoxAccounts	DEBUG	writing secure storage: ["kA","kB"]
+1505557244661	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://token.services.mozilla.com/1.0/sync/1.5
+1505557244663	Services.Common.RESTRequest	TRACE	Channel for GET https://token.services.mozilla.com/1.0/sync/1.5 returned status code 0
+1505557244663	Services.Common.RESTRequest	DEBUG	GET https://token.services.mozilla.com/1.0/sync/1.5 200
+1505557244663	Services.Common.RESTRequest	TRACE	GET body: {"uid": 63718802, "hashalg": "sha256", "api_endpoint": "https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802", "duration": 3600, "key": "T2i1v94ApsMko1VqjRBHToyGPONQlvVUw_ClB3deF78=", "hashed_fxa_uid": "09ab32ba15bd04812203aeb478b47641", "id": "eyJub2RlIjogImh0dHBzOi8vc3luYy00MzUtdXMtd2VzdC0yLnN5bmMuc2VydmljZXMubW96aWxsYS5jb20iLCAidWlkIjogNjM3MTg4MDIsICJleHBpcmVzIjogMTUwNTU2MDg0NCwgImZ4YV91aWQiOiAiMDlhYjMyYmExNWJkMDQ4MTIyMDNhZWI0NzhiNDc2NDEiLCAic2FsdCI6ICI0ODJkZDMiLCAiZGV2aWNlX2lkIjogIjE0M2QyMGU3ZTliODNlMTY0MWMyYjgyY2FlN2U2ZjQyIn3q09lu142d9KnaEMNG-9xiQ9EElaWfpU3VRStTvw61mA=="}
+1505557244663	Common.TokenServerClient	DEBUG	Got token response: 200
+1505557244664	Common.TokenServerClient	DEBUG	Successful token response
+1505557244664	Sync.BrowserIDManager	DEBUG	Successfully got a sync token
+1505557244670	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for undefined
+1505557244671	Sync.BrowserIDManager	INFO	Background fetch for key bundle done
+1505557244671	Sync.Status	DEBUG	Status.login: success.login => success.login
+1505557244671	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1505557244672	Sync.Service	INFO	User logged in successfully - verifying login.
+1505557244672	Sync.BrowserIDManager	DEBUG	unlockAndVerifyAuthState already has (or can fetch) sync keys
+1505557244673	Sync.Service	DEBUG	Fetching unlocked auth state returned success.status_ok
+1505557244674	Sync.BrowserIDManager	DEBUG	_ensureValidToken already has one
+1505557244674	Sync.BrowserIDManager	DEBUG	_findCluster returning https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/
+1505557244674	Sync.BrowserIDManager	DEBUG	Cluster value = https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/
+1505557244674	Sync.BrowserIDManager	DEBUG	Setting cluster to https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/
+1505557244675	Sync.Service	DEBUG	Caching URLs under storage user base: https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/
+1505557244680	Sync.BrowserIDManager	DEBUG	_ensureValidToken already has one
+1505557245378	Sync.AsyncResource	DEBUG	mesg: GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/info/collections
+1505557245378	Sync.AsyncResource	DEBUG	GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/info/collections
+1505557245381	Sync.Service	DEBUG	Fetching server configuration: https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/info/configuration
+1505557245384	Sync.BrowserIDManager	DEBUG	_ensureValidToken already has one
+1505557245583	Sync.AsyncResource	DEBUG	mesg: GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/info/configuration
+1505557245583	Sync.AsyncResource	DEBUG	GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/info/configuration
+1505557245585	Sync.Service	DEBUG	Fetching global metadata record
+1505557245590	Sync.BrowserIDManager	DEBUG	_ensureValidToken already has one
+1505557245833	Sync.AsyncResource	DEBUG	mesg: GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/storage/meta/global
+1505557245833	Sync.AsyncResource	DEBUG	GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/storage/meta/global
+1505557245835	Sync.Service	DEBUG	Clearing cached meta record. metaModified is undefined, setting to 1505515662.17
+1505557245838	Sync.BrowserIDManager	DEBUG	_ensureValidToken already has one
+1505557246095	Sync.AsyncResource	DEBUG	mesg: GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/storage/meta/global
+1505557246095	Sync.AsyncResource	DEBUG	GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/storage/meta/global
+1505557246098	Sync.Service	DEBUG	Weave Version: 1.57.0 Local Storage: 5 Remote Storage: 5
+1505557246099	Sync.Service	DEBUG	Fetching and verifying -- or generating -- symmetric keys.
+1505557246099	Sync.Service	INFO	Testing info/collections: {"prefs":1505555539.02,"clients":1505557083.7,"crypto":1489449105.47,"forms":1505515559.67,"meta":1505515662.17,"bookmarks":1505515558.76,"addons":1505515756.95,"history":1505555632.46}
+1505557246099	Sync.CollectionKeyManager	INFO	Testing for updateNeeded. Last modified: 0
+1505557246099	Sync.Service	INFO	collection keys reports that a key update is needed.
+1505557246103	Sync.BrowserIDManager	DEBUG	_ensureValidToken already has one
+1505557246400	Sync.AsyncResource	DEBUG	mesg: GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/storage/crypto/keys
+1505557246400	Sync.AsyncResource	DEBUG	GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/storage/crypto/keys
+1505557246402	Sync.CollectionKeyManager	INFO	Updating collection keys...
+1505557246407	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1489449105.47.
+1505557246407	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1505557246407	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1505557246408	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1505557246408	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1505557246408	Sync.CollectionKeyManager	INFO	Bumping last modified to 1489449105.47
+1505557246408	Sync.CollectionKeyManager	INFO	Collection keys updated.
+1505557246408	Sync.Status	DEBUG	Status.login: success.login => success.login
+1505557246409	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1505557246409	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1505557246410	Sync.Telemetry	TRACE	observed weave:service:sync:start 
+1505557246413	Sync.Status	INFO	Resetting Status.
+1505557246414	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1505557246416	Sync.BrowserIDManager	DEBUG	_ensureValidToken already has one
+1505557246708	Sync.AsyncResource	DEBUG	mesg: GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/info/collections
+1505557246708	Sync.AsyncResource	DEBUG	GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/info/collections
+1505557246711	Sync.Service	DEBUG	Fetching server configuration: https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/info/configuration
+1505557246711	Sync.BrowserIDManager	DEBUG	_ensureValidToken already has one
+1505557246915	Sync.AsyncResource	DEBUG	mesg: GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/info/configuration
+1505557246915	Sync.AsyncResource	DEBUG	GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/info/configuration
+1505557246918	Sync.Service	DEBUG	Fetching global metadata record
+1505557246918	Sync.Service	DEBUG	Weave Version: 1.57.0 Local Storage: 5 Remote Storage: 5
+1505557246919	Sync.Service	DEBUG	Fetching and verifying -- or generating -- symmetric keys.
+1505557246919	Sync.Service	INFO	Testing info/collections: {"prefs":1505555539.02,"clients":1505557083.7,"crypto":1489449105.47,"forms":1505515559.67,"meta":1505515662.17,"bookmarks":1505515558.76,"addons":1505515756.95,"history":1505555632.46}
+1505557246919	Sync.CollectionKeyManager	INFO	Testing for updateNeeded. Last modified: 1489449105.47
+1505557246919	Sync.Synchronizer	DEBUG	Refreshing client list.
+1505557246920	Sync.Telemetry	TRACE	observed weave:engine:sync:start clients
+1505557246924	Sync.Engine.Clients	DEBUG	First sync, uploading all items
+1505557246926	Sync.Engine.Clients	INFO	1 outgoing items pre-reconciliation
+1505557246933	Sync.BrowserIDManager	DEBUG	_ensureValidToken already has one
+1505557247223	Sync.Collection	DEBUG	mesg: GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/storage/clients?full=1&limit=1000
+1505557247223	Sync.Collection	DEBUG	GET success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/storage/clients?full=1&limit=1000
+1505557247243	Sync.Engine.Clients	INFO	Records: 1 applied, 1 successfully, 0 failed to apply, 0 newly failed to apply, 1 reconciled.
+1505557247244	Sync.Telemetry	TRACE	observed weave:engine:sync:applied clients
+1505557247244	Sync.Engine.Clients	DEBUG	Refreshing the known stale clients list
+1505557247248	Services.Common.RESTRequest	TRACE	local time, offset: 1505557247247, -948
+1505557247249	Services.Common.RESTRequest	TRACE	hawk auth header: Hawk id="6227a8f95eca4ec6a4c72173300b8cfff93b87d691b49805bf5d70a203d21219", ts="1505557246", nonce="hXx0XsSjneo=", mac="QpJwtrOcAkgQlqWamXUpjdS2j/mmk4P8nQ/YJoqOe3E="
+1505557247250	Services.Common.RESTRequest	DEBUG	GET request to https://api.accounts.firefox.com/v1/account/devices
+1505557247250	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1505557247250	Services.Common.RESTRequest	TRACE	HTTP Header content-type: text/plain
+1505557247250	Services.Common.RESTRequest	TRACE	HTTP Header accept-language: en-US, en
+1505557247528	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://api.accounts.firefox.com/v1/account/devices
+1505557247530	Services.Common.RESTRequest	TRACE	Channel for GET https://api.accounts.firefox.com/v1/account/devices returned status code 0
+1505557247530	Services.Common.RESTRequest	DEBUG	GET https://api.accounts.firefox.com/v1/account/devices 200
+1505557247530	Services.Common.RESTRequest	TRACE	GET body: [{"id":"41a31ff5ba6c2443646b08b35b76f413","isCurrentDevice":true,"lastAccessTime":1505515495534,"lastAccessTimeFormatted":"12 hours ago","name":"matthew’s Firefox on Cherek","type":"desktop","pushCallback":"https://updates.push.services.mozilla.com/wpush/v1/gAAAAABZvFfoGHLNUd0Q3Ig58L8Tz99-IWjHTCFoPkUdZ7Oqy7ScIY9RJyVrSCFZDDbzGJ2fAQKW5sJlfJT0AhLYZksEl5Sb10E6rdm_olYKx8V_6YBb1bwTxDRvx9SMQNEhbDP19gx8","pushPublicKey":"BKUigrAOeSKup2DiLUW1r9AJw-5ZcIPuuLqOOmERl-WAwW7_ktrxtr_-_febZo0ynP1qUEA2fOMXsB_c_FjzfRc","pushAuthKey":"nVeU5XF9X49-ewJhsqUV3Q","pushEndpointExpired":0},{"id":"5463df2d94743fc4754a25c4c5036937","isCurrentDevice":false,"lastAccessTime":1498310213129,"lastAccessTimeFormatted":"3 months ago","name":"matthewrossetter’s Firefox on student-10-245-104-128","type":"desktop","pushCallback":"https://updates.push.services.mozilla.com/wpush/v1/gAAAAABYq3_WBfJFXYhkJqrHEu_GETLV3wDVdZrXjzosHIqbRB0vq8IjMRq_7Ksky7cNwv87ZJ4pBXUDXtT49t_B7BAAgHWMKEMDnpSoKyFAhxtxhDhuHOq1XeWMiSaI8EMV_gvCsmtI","pushPublicKey":"BI_wCEF5tqrlY9tBoSj_njgBjqwJRs8qiVj8Bhq7SacjzO2Y7f0LU4P2L8TfBA4UJ7zQF1Ed5YOpFIDp6gQcikY","pushAuthKey":"pN85EG2IBJIZ6hCH8qlC6Q","pushEndpointExpired":0}]
+1505557247530	Hawk	DEBUG	(Response) /account/devices: code: 200 - Status text: OK
+1505557247531	Hawk	DEBUG	Clock offset vs https://api.accounts.firefox.com/v1: -531
+1505557247556	Sync.Engine.Clients	INFO	Posting 1 records of 549 bytes with batch=true
+1505557247558	Sync.BrowserIDManager	DEBUG	_ensureValidToken already has one
+1505557247560	Sync.Collection	DEBUG	POST Length: 549
+1505557247835	Sync.Collection	DEBUG	mesg: POST success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/storage/clients?batch=true&commit=true
+1505557247836	Sync.Collection	DEBUG	POST success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/storage/clients?batch=true&commit=true
+1505557247849	Sync.Telemetry	TRACE	observed weave:engine:sync:uploaded clients
+1505557247854	Sync.SyncScheduler	DEBUG	Client count: 0 -> 2
+1505557247855	Sync.Telemetry	TRACE	observed weave:engine:sync:finish clients
+1505557247859	Sync.Synchronizer	INFO	Updating enabled engines: 2 clients.
+1505557247863	Sync.Synchronizer	INFO	Syncing all enabled engines.
+1505557247865	Sync.Telemetry	TRACE	observed weave:engine:sync:start prefs
+1505557247866	Sync.Engine.Prefs	INFO	0 outgoing items pre-reconciliation
+1505557247867	Sync.Engine.Prefs	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1505557247868	Sync.Telemetry	TRACE	observed weave:engine:sync:applied prefs
+1505557247869	Sync.Telemetry	TRACE	observed weave:engine:sync:finish prefs
+1505557247869	Sync.Telemetry	TRACE	observed weave:engine:sync:start bookmarks
+1505557247875	Sync.Engine.Bookmarks	INFO	0 outgoing items pre-reconciliation
+1505557247876	Sync.Engine.Bookmarks	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1505557247877	Sync.Telemetry	TRACE	observed weave:engine:sync:applied bookmarks
+1505557247880	BookmarkSyncUtils	DEBUG	pushChanges: Processed change records: {"skipped":0,"updated":0,"tombstones":0}
+1505557247881	Sync.Telemetry	TRACE	observed weave:engine:sync:finish bookmarks
+1505557247881	Sync.Telemetry	TRACE	observed weave:engine:sync:start addons
+1505557247882	Sync.Engine.Addons	DEBUG	Refreshing reconciler state
+1505557247882	Sync.AddonsReconciler	INFO	Refreshing global state from AddonManager.
+1505557247889	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Web Compat (version=1.1, id=webcompat@mozilla.org)
+1505557247889	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Shield Recipe Client (version=55.1, id=shield-recipe-client@mozilla.org)
+1505557247889	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Application Update Service Helper (version=2.0, id=aushelper@mozilla.org)
+1505557247889	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Pocket (version=1.0.5, id=firefox@getpocket.com)
+1505557247889	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Default (version=55.0.3, id={972ce4c6-7e08-4474-a285-3208198ce6fd})
+1505557247890	Sync.AddonsReconciler	DEBUG	Rectifying state for addon LastPass: Free Password Manager (version=4.1.54, id=support@lastpass.com)
+1505557247890	Sync.AddonsReconciler	DEBUG	Rectifying state for addon DuckDuckGo Plus (version=1.1.23, id=jid1-ZAdIEUB7XOzOJw@jetpack)
+1505557247890	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Click-to-Play staged rollout (version=1.3, id=clicktoplay-rollout@mozilla.org)
+1505557247890	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Multi-process staged rollout (version=2.05, id=e10srollout@mozilla.org)
+1505557247891	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Follow-on Search Telemetry (version=0.9.3, id=followonsearch@mozilla.com)
+1505557247891	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Photon onboarding (version=0.1, id=onboarding@mozilla.org)
+1505557247892	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Firefox Screenshots (version=10.12.0, id=screenshots@mozilla.org)
+1505557247892	Sync.AddonsReconciler	DEBUG	Rectifying state for addon HTTPS Everywhere (version=2017.9.12, id=https-everywhere@eff.org)
+1505557247892	Sync.AddonsReconciler	DEBUG	Rectifying state for addon I don't care about cookies (version=2.6.8, id=jid1-KKzOGWgsW3Ao4Q@jetpack)
+1505557247892	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Privacy Badger (version=2017.9.12.1, id=jid1-MnnxcxisBPnSXQ@jetpack)
+1505557247892	Sync.AddonsReconciler	DEBUG	Rectifying state for addon uBlock Origin (version=1.14.8, id=uBlock0@raymondhill.net)
+1505557247892	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Compact Light (version=, id=firefox-compact-light@mozilla.org@personas.mozilla.org)
+1505557247893	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Compact Dark (version=, id=firefox-compact-dark@mozilla.org@personas.mozilla.org)
+1505557247893	Sync.AddonsReconciler	DEBUG	Rectifying state for addon OpenH264 Video Codec provided by Cisco Systems, Inc. (version=1.6, id=gmp-gmpopenh264)
+1505557247893	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Widevine Content Decryption Module provided by Google Inc. (version=1.4.8.903, id=gmp-widevinecdm)
+1505557247893	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Shockwave Flash (version=27.0.0.130, id={6c05dc9d-bf02-9ece-49d3-30aba1586653})
+1505557247899	Sync.AddonsReconciler	INFO	Saving reconciler state to file: addonsreconciler
+1505557247905	Sync.Engine.Addons	INFO	0 outgoing items pre-reconciliation
+1505557247906	Sync.Engine.Addons	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1505557247906	Sync.Telemetry	TRACE	observed weave:engine:sync:applied addons
+1505557247907	Sync.Telemetry	TRACE	observed weave:engine:sync:finish addons
+1505557247907	Sync.Telemetry	TRACE	observed weave:engine:sync:start forms
+1505557247909	Sync.Engine.Forms	INFO	0 outgoing items pre-reconciliation
+1505557247910	Sync.Engine.Forms	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1505557247910	Sync.Telemetry	TRACE	observed weave:engine:sync:applied forms
+1505557247911	Sync.Telemetry	TRACE	observed weave:engine:sync:finish forms
+1505557247911	Sync.Telemetry	TRACE	observed weave:engine:sync:start history
+1505557247913	Sync.Engine.History	INFO	1 outgoing items pre-reconciliation
+1505557247916	Sync.Engine.History	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1505557247916	Sync.Telemetry	TRACE	observed weave:engine:sync:applied history
+1505557247921	Sync.Engine.History	INFO	Posting 1 records of 437 bytes with batch=true
+1505557247922	Sync.BrowserIDManager	DEBUG	_ensureValidToken already has one
+1505557247922	Sync.Collection	DEBUG	POST Length: 437
+1505557248243	Sync.Collection	DEBUG	mesg: POST success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/storage/history?batch=true&commit=true
+1505557248243	Sync.Collection	DEBUG	POST success 200 https://sync-435-us-west-2.sync.services.mozilla.com/1.5/63718802/storage/history?batch=true&commit=true
+1505557248243	Sync.Telemetry	TRACE	observed weave:engine:sync:uploaded history
+1505557248244	Sync.Telemetry	TRACE	observed weave:engine:sync:finish history
+1505557248244	Sync.Telemetry	TRACE	observed weave:engine:sync:start extension-storage
+1505557248244	Sync.Engine.Extension-Storage	DEBUG	Syncing extension settings for ["https-everywhere@eff.org"]
+1505557248251	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1505515660756.
+1505557248252	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1505557248252	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1505557248252	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1505557248252	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1505557248252	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1505557248252	Sync.CollectionKeyManager	INFO	Bumping last modified to 1505515660756
+1505557248272	FirefoxAccounts	DEBUG	getOAuthToken enter
+1505557248272	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1505557249120	Sync.Status	DEBUG	Status for engine extension-storage: error.engine.reason.unknown_fail
+1505557249120	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed_partial
+1505557249120	Sync.ErrorHandler	DEBUG	extension-storage was interrupted due to the application shutting down
+1505557249120	Sync.Telemetry	TRACE	observed weave:engine:sync:error extension-storage
+1505557249120	Sync.Synchronizer	INFO	extension-storage was interrupted by shutdown; no other engines will sync
+1505557249121	Sync.Synchronizer	INFO	Aborting sync for failure in extension-storage
+1505557249121	Sync.Synchronizer	INFO	Sync completed at 2017-09-16 11:20:49 after 2.71 secs.
+1505557249122	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms.
+1505557249122	Sync.ErrorHandler	ERROR	Sync was interrupted due to the application shutting down
+1505557249123	Sync.Telemetry	TRACE	observed weave:service:sync:error 
+1505557249124	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "App. Quitting"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "JS frame :: resource://services-common/async.js :: checkAppReady/onQuitApplication/Async.checkAppReady :: line 123"  data: no] Stack trace: checkAppReady/onQuitApplication/Async.checkAppReady()@resource://services-common/async.js:123 < waitForSyncCallback()@resource://services-common/async.js:97 < makeSpinningCallback/callback.wait()@resource://services-common/async.js:168 < promiseSpinningly()@resource://services-common/async.js:234 < sync()@resource://services-sync/stages/enginesync.js:184 < onNotify()@resource://services-sync/service.js:1081 < WrappedNotify()@resource://services-sync/util.js:160 < WrappedLock()@resource://services-sync/util.js:116 < _lockedSync()@resource://services-sync/service.js:1071 < sync/<()@resource://services-sync/service.js:1063 < WrappedCatch()@resource://services-sync/util.js:91 < sync()@resource://services-sync/service.js:1052
+1505557249131	Sync.ErrorHandler	DEBUG	Addons installed: 6
+1505557249132	Sync.ErrorHandler	DEBUG	 - LastPass: Free Password Manager, version 4.1.54, id support@lastpass.com
+1505557249132	Sync.ErrorHandler	DEBUG	 - DuckDuckGo Plus, version 1.1.23, id jid1-ZAdIEUB7XOzOJw@jetpack
+1505557249132	Sync.ErrorHandler	DEBUG	 - HTTPS Everywhere, version 2017.9.12, id https-everywhere@eff.org
+1505557249132	Sync.ErrorHandler	DEBUG	 - I don't care about cookies, version 2.6.8, id jid1-KKzOGWgsW3Ao4Q@jetpack
+1505557249133	Sync.ErrorHandler	DEBUG	 - Privacy Badger, version 2017.9.12.1, id jid1-MnnxcxisBPnSXQ@jetpack
+1505557249133	Sync.ErrorHandler	DEBUG	 - uBlock Origin, version 1.14.8, id uBlock0@raymondhill.net

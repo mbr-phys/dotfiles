@@ -1,5 +1,5 @@
+bashmount
 bluez-alsa-git
-dotfiles
 hal-flash
 i3-gaps-next-git
 i3blocks-gaps-git
