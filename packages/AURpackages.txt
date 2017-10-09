@@ -1,3 +1,5 @@
+anaconda
+anaconda2
 bashmount
 bluez-alsa-git
 hal-flash

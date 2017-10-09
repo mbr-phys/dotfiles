@@ -28,6 +28,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
+bindsym Ctrl+XF86MonBrightnessUp exec light -A 1
+bindsym Ctrl+XF86MonBrightnessDown exec light -U 1
 
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
@@ -46,6 +48,10 @@ mode "power" {
 
 bindsym $mod+m mode "music"
 mode "music" {
+    bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+
+    bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
+    bindsym XF86AudioMute exec amixer -q sset Master toggle
+
     bindsym space exec playerctl play-pause
     bindsym n     exec playerctl next
     bindsym b     exec playerctl previous
@@ -132,7 +138,7 @@ mode "launcher" {
     bindsym a exec atom, mode "default"; workspace 2
     bindsym s exec spotify, mode "default"; workspace 6
     bindsym t exec telegram-desktop, mode "default"; workspace 5
-    bindsym p exec urxvt -geometry 110x12-0-25 -name "floatingterm" -e alsamixer, mode "default"
+    bindsym p exec urxvt -name "floatingterm" -e alsamixer, mode "default"
     bindsym n exec urxvt -geometry 90x35-0-25 -name "floatingterm" -e nmtui, mode "default"
     bindsym r exec urxvt -e ranger, mode "default"
 
