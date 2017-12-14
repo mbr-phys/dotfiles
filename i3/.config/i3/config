@@ -13,6 +13,7 @@ set $mod Mod4
 exec compton -b --xrender-sync --xrender-sync-fence
 exec --no-startup-id dunst
 exec_always --no-startup-id feh --randomize --bg-fill ~/dotfiles/backgrounds/
+exec xss-lock ~/.config/i3/scripts/lock
 
 # GENERAL #######################
 
@@ -32,27 +33,21 @@ bindsym Ctrl+XF86MonBrightnessUp exec light -A 1
 bindsym Ctrl+XF86MonBrightnessDown exec light -U 1
 
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+
+bindsym Shift+XF86AudioRaiseVolume exec amixer -q sset Master 1%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
+bindsym Shift+XF86AudioLowerVolume exec amixer -q sset Master 1%-
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
 
 bindsym $mod+p mode "power"
 mode "power" {
     bindsym e       exit, mode "default"
-    bindsym l       exec ~/dotfiles/scripts/lock, mode "default"
+    bindsym l       exec ~/.config/i3/scripts/lock, mode "default"
     bindsym shift+s exec poweroff, mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-
-
-
-
-
-
-
 
 
 # WORKSPACE SETTINGS #######################
@@ -100,11 +95,6 @@ bindsym $mod+Ctrl+Left  move workspace to output left
 bindsym $mod+Ctrl+Right move workspace to output right
 
 
-
-
-
-
-
 # PROGRAM SETTINGS ###############################
 
 for_window [title="alsamixer"] floating enable border pixel 0
@@ -147,9 +137,6 @@ mode "music" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-
-
 
 
 # WINDOW SETTINGS ###############################
@@ -203,6 +190,9 @@ bindsym $mod+Shift+a focus parent
 
 # focus the child container
 #bindsym $mod1+d focus child
+
+#focus mode
+bindsym $mod+Shift+f exec --no-startup-id ~/.config/i3/scripts/focus.py
 
 bindsym $mod+r mode "resize"
 

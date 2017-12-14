@@ -37,6 +37,7 @@ gawk
 gcc
 gcc-libs
 gettext
+gimp
 git
 glibc
 gnome-bluetooth
@@ -56,6 +57,8 @@ iproute2
 iputils
 iw
 jfsutils
+jupyter-nbconvert
+jupyter-notebook
 less
 libreoffice-fresh
 libtool
@@ -69,6 +72,7 @@ make
 man-db
 man-pages
 mdadm
+mypaint
 nano
 netctl
 network-manager-applet
@@ -77,6 +81,7 @@ openssh
 openvpn
 p7zip
 pacman
+pandoc
 paprefs
 patch
 pavucontrol
@@ -93,10 +98,13 @@ psmisc
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
+python-i3-py
+python-ipywidgets
+python-pip
 python-powerline
+python2-ipykernel
 ranger
 reiserfsprogs
-rfkill
 rofi
 rxvt-unicode
 rxvt-unicode-terminfo
@@ -130,6 +138,7 @@ texlive-publishers
 texlive-science
 thunar
 tmux
+ttf-font-awesome
 ttf-hack
 unrar
 usbutils

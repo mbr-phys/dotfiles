@@ -7,11 +7,14 @@ i3-gaps-next-git
 i3blocks-gaps-git
 i3lock-color-git
 light-git
+mkpdf
+neofetch
 oh-my-zsh-git
 package-query
+rambox-bin
 shutter
 spotify
 telegram-desktop-bin
 texlive-localmanager-git
-ttf-font-awesome
+xss-lock
 yaourt

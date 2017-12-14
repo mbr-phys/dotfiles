@@ -7,6 +7,9 @@ filetype plugin indent on    " required
 
 set t_Co=256
 
+:filetype plugin on
+:syntax on
+
 syntax enable
 set tabstop=4
 set softtabstop=4
