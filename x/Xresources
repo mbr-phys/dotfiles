@@ -15,7 +15,7 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 
-#define base00 #1d1f21
+#define base00 #282828
 #define base01 #282a2e
 #define base02 #373b41
 #define base03 #969896
@@ -34,13 +34,13 @@ Xft.lcdfilter: lcddefault
 
 
 #define bg     #282828
-#define red    #cc241d
-#define green  #98971a
-#define yellow #fabd2f
-#define blue   #458588
-#define purple #b16286
+#define red    #ee4035
+#define green  #7bc043
+#define yellow #fdf498
+#define blue   #0392cf
+#define purple #e34add
 #define aqua   #689d6a
-#define orange #d65d0e
+#define orange #f37736
 #define gray   #a89984
 #define fg     #ebdbb2
 
@@ -75,13 +75,13 @@ URxvt*mouseWheelScrollPage:     false
 URxvt*cursorBlink:              true
 URxvt*saveLines:                5000
 
-URxvt.cursorColor:          #e1ded7
+URxvt.cursorColor:          #ebdbb2
 URxvt.background:           #282828
-URxvt.foreground:           #e1ded7
+URxvt.foreground:           #ebdbb2
 
 URxvt.color0:       bg
 URxvt.color1:       red
-URxvt.color2:       #00FF00
+URxvt.color2:       green
 URxvt.color3:       yellow
 URxvt.color4:       blue
 URxvt.color5:       purple
