@@ -22,7 +22,7 @@
 
 
 .toolbarbutton-animatable-box[brighttext], toolbar[brighttext] .toolbarbutton-animatable-box, toolbar[brighttext] .toolbarbutton-1 {
-    fill: #ebdbb2 !important;
+    fill: #f0f8ff !important;
 }
 
 
@@ -108,7 +108,7 @@ toolbarspring {
 	max-height: inherit !important;
 }
 toolbar {
-	min-height: 37px !important;
+	min-height: 0px !important;
 }
 toolbar .toolbarbutton-1 {
 	padding: 3px 2px !important;
@@ -159,8 +159,8 @@ toolbar .toolbarbutton-1 {
 }
 
 [data-identity-color="pink"] {
-    --identity-tab-color: #ebdbb2 !important;
-    --identity-icon-color: #ebdbb2 !important;
+    --identity-tab-color: #f0f8ff !important;
+    --identity-icon-color: #f0f8ff !important;
 }
 
 [data-identity-color="purple"] {
