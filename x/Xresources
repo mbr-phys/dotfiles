@@ -23,14 +23,14 @@ Xft.lcdfilter: lcddefault
 #define base05 #c5c8c6
 #define base06 #e0e0e0
 #define base07 #ffffff
-#define base08 #cc6666
-#define base09 #de935f
-#define base0A #f0c674
-#define base0B #b5bd68
-#define base0C #8abeb7
-#define base0D #81a2be
-#define base0E #b294bb
-#define base0F #a3685a
+#define base08 #e86af0
+#define base09 #9e379f
+#define base0A #77aaff
+#define base0B #5588ff
+#define base0C #99ccff
+#define base0D #7bb3ff
+#define base0E #bbeeff
+#define base0F #3366ff
 
 
 #define bg     #282828
@@ -82,7 +82,7 @@ URxvt.foreground:           #ebdbb2
 URxvt.color0:       bg
 URxvt.color1:       red
 URxvt.color2:       green
-URxvt.color3:       yellow
+URxvt.color3:       orange
 URxvt.color4:       blue
 URxvt.color5:       purple
 URxvt.color6:       aqua

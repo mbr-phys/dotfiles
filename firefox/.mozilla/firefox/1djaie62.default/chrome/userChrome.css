@@ -35,6 +35,7 @@
 #TabsToolbar .tabbrowser-tab, #userContext-label, #searchbar > .searchbar-textbox, #urlbar  {
     text-transform: lowercase;
     font-family: 'Overpass' !important;
+    font-size: 12px !important;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity, #urlbar[pageproxystate="valid"] > #identity-box.chromeUI, #urlbar[pageproxystate="valid"] > #identity-box.extensionPage, #urlbar-display-box {

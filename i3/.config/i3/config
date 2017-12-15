@@ -12,9 +12,10 @@ set $mod Mod4
 
 exec compton -b --xrender-sync --xrender-sync-fence
 exec --no-startup-id dunst
-exec_always --no-startup-id feh --randomize --bg-fill ~/dotfiles/backgrounds/
+exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/wallpaper141.jpg
 exec xss-lock ~/.config/i3/scripts/lock
 
+#--randomise on wallpaper to jig it up
 # GENERAL #######################
 
 font xft:Overpass 9
@@ -38,6 +39,7 @@ bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
 bindsym Shift+XF86AudioLowerVolume exec amixer -q sset Master 1%-
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
+bindsym $mod+Print exec --no-startup-id scrot ~/Desktop/%Y-%m-%d-%T-screen.png
 
 bindsym $mod+p mode "power"
 mode "power" {
@@ -292,7 +294,7 @@ bar {
        statusline $bg0
 
        #                    border  bg      text
-       focused_workspace    $blu    $blu    $fg1
+       focused_workspace    $blu    $blu    $fg2
        active_workspace     $bg0    $bg0    $fg2
        inactive_workspace   $bg0    $bg0    $fg2
        urgent_workspace     $red    $red    $fg2
