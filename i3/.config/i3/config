@@ -39,7 +39,7 @@ bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
 bindsym Shift+XF86AudioLowerVolume exec amixer -q sset Master 1%-
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
-bindsym $mod+Print exec --no-startup-id scrot ~/Desktop/%Y-%m-%d-%T-screen.png
+bindsym $mod+x exec --no-startup-id scrot ~/Desktop/%Y-%m-%d-%T-screen.png
 
 bindsym $mod+p mode "power"
 mode "power" {
@@ -116,7 +116,6 @@ mode "launcher" {
     bindsym a exec atom, mode "default"; workspace 2
     bindsym s exec spotify, mode "default"; workspace 6
     bindsym t exec telegram-desktop, mode "default"; workspace 5
-    bindsym w exec rambox, mode "default"; workspace 5
     bindsym p exec urxvt -name "floatingterm" -e alsamixer, mode "default"
     bindsym n exec urxvt -geometry 90x35-0-25 -name "floatingterm" -e nmtui, mode "default"
     bindsym r exec urxvt -e ranger, mode "default"

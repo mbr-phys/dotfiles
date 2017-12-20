@@ -36,10 +36,10 @@ Xft.lcdfilter: lcddefault
 #define bg     #282828
 #define red    #ee4035
 #define green  #7bc043
-#define yellow #fdf498
+#define yellow #ffc425
 #define blue   #0392cf
 #define purple #e34add
-#define aqua   #689d6a
+#define aqua   #00aedb
 #define orange #f37736
 #define gray   #a89984
 #define fg     #ebdbb2
@@ -94,5 +94,5 @@ URxvt.color10:      base06
 URxvt.color11:      base02
 URxvt.color12:      base04
 URxvt.color13:      base06
-URxvt.color14:      base0F
+URxvt.color14:      blue
 URxvt.color15		base07
