@@ -34,9 +34,9 @@ bindsym Ctrl+XF86MonBrightnessUp exec light -A 1
 bindsym Ctrl+XF86MonBrightnessDown exec light -U 1
 
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+
-bindsym Shift+XF86AudioRaiseVolume exec amixer -q sset Master 1%+
+bindsym Ctrl+XF86AudioRaiseVolume exec amixer -q sset Master 1%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
-bindsym Shift+XF86AudioLowerVolume exec amixer -q sset Master 1%-
+bindsym Ctrl+XF86AudioLowerVolume exec amixer -q sset Master 1%-
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
 bindsym $mod+x exec --no-startup-id scrot ~/Desktop/%Y-%m-%d-%T-screen.png
