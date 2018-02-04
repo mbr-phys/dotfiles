@@ -54,41 +54,53 @@ mode "power" {
 
 # WORKSPACE SETTINGS #######################
 
+set $workspace1 "1:1 "
+set $workspace2 "2:2 "
+set $workspace3 "3:3 "
+set $workspace4 "4:4 "
+set $workspace5 "5:5 "
+set $workspace6 "6:6 "
+set $workspace7 "7:7 "
+set $workspace8 "8:8 "
+set $workspace9 "9:9 "
+set $workspace0 "0:0 "
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace0
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+shift+1 move container to workspace $workspace1
+bindsym $mod+shift+2 move container to workspace $workspace2
+bindsym $mod+shift+3 move container to workspace $workspace3
+bindsym $mod+shift+4 move container to workspace $workspace4
+bindsym $mod+shift+5 move container to workspace $workspace5
+bindsym $mod+shift+6 move container to workspace $workspace6
+bindsym $mod+shift+7 move container to workspace $workspace7
+bindsym $mod+shift+8 move container to workspace $workspace8
+bindsym $mod+shift+9 move container to workspace $workspace9
+bindsym $mod+shift+0 move container to workspace $workspace0
 
 # move focused container to workspace and switch to workspace
-bindsym $mod+Ctrl+1 move container to workspace 1; workspace 1
-bindsym $mod+Ctrl+2 move container to workspace 2; workspace 2
-bindsym $mod+Ctrl+3 move container to workspace 3; workspace 3
-bindsym $mod+Ctrl+4 move container to workspace 4; workspace 4
-bindsym $mod+Ctrl+5 move container to workspace 5; workspace 5
-bindsym $mod+Ctrl+6 move container to workspace 6; workspace 6
-bindsym $mod+Ctrl+7 move container to workspace 7; workspace 7
-bindsym $mod+Ctrl+8 move container to workspace 8; workspace 8
-bindsym $mod+Ctrl+9 move container to workspace 9; workspace 9
-bindsym $mod+Ctrl+0 move container to workspace 10; workspace 10
+bindsym $mod+Ctrl+1 move container to workspace $workspace1; workspace $workspace1
+bindsym $mod+Ctrl+2 move container to workspace $workspace2; workspace $workspace2
+bindsym $mod+Ctrl+3 move container to workspace $workspace3; workspace $workspace3
+bindsym $mod+Ctrl+4 move container to workspace $workspace4; workspace $workspace4
+bindsym $mod+Ctrl+5 move container to workspace $workspace5; workspace $workspace5
+bindsym $mod+Ctrl+6 move container to workspace $workspace6; workspace $workspace6
+bindsym $mod+Ctrl+7 move container to workspace $workspace7; workspace $workspace7
+bindsym $mod+Ctrl+8 move container to workspace $workspace8; workspace $workspace8
+bindsym $mod+Ctrl+9 move container to workspace $workspace9; workspace $workspace9
+bindsym $mod+Ctrl+0 move container to workspace $workspace0; workspace $workspace0
+
 
 bindsym $mod+Tab workspace next
 bindsym $mod+shift+Tab workspace prev
@@ -102,10 +114,11 @@ bindsym $mod+Ctrl+Right move workspace to output right
 for_window [title="alsamixer"] floating enable border pixel 0
 for_window [class="GParted"] floating enable
 for_window [class="URxvt" instance="floatingterm"] floating enable
+for_window [instance="afloatingwindow"] floating enable
 
-for_window [class="Atom"] move to workspace 2
-for_window [class="Telegram"] move to workspace 5
-for_window [class="Spotify"] move to workspace 6
+for_window [class="Atom"] move to workspace $workspace2
+for_window [class="Telegram"] move to workspace $workspace9
+for_window [class="Spotify"] move to workspace $workspace6
 
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+s exec env firefox; exec atom; exec spotify
@@ -113,9 +126,9 @@ bindsym $mod+a mode "launcher"
 
 mode "launcher" {
     bindsym f exec env firefox, mode "default"
-    bindsym a exec atom, mode "default"; workspace 2
-    bindsym s exec spotify, mode "default"; workspace 6
-    bindsym t exec telegram-desktop, mode "default"; workspace 5
+    bindsym a exec atom, mode "default"; workspace $workspace2
+    bindsym s exec spotify, mode "default"; workspace $workspace6
+    bindsym t exec telegram-desktop, mode "default"; workspace $workspace9
     bindsym p exec urxvt -name "floatingterm" -e alsamixer, mode "default"
     bindsym n exec urxvt -geometry 90x35-0-25 -name "floatingterm" -e nmtui, mode "default"
     bindsym r exec urxvt -e ranger, mode "default"
