@@ -17,6 +17,7 @@ cbatticon
 compton
 coreutils
 cryptsetup
+deluge
 device-mapper
 dhcpcd
 dialog
@@ -74,6 +75,7 @@ man-pages
 mdadm
 mypaint
 nano
+neovim
 netctl
 network-manager-applet
 networkmanager
@@ -109,6 +111,7 @@ rofi
 rxvt-unicode
 rxvt-unicode-terminfo
 s-nail
+scrot
 sed
 shadow
 source-highlight
@@ -138,7 +141,6 @@ texlive-publishers
 texlive-science
 thunar
 tmux
-ttf-font-awesome
 ttf-hack
 unrar
 usbutils
@@ -200,6 +202,7 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xss-lock
 zathura
 zathura-pdf-poppler
 zip

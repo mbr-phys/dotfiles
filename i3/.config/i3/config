@@ -46,6 +46,7 @@ mode "power" {
     bindsym e       exit, mode "default"
     bindsym l       exec ~/.config/i3/scripts/lock, mode "default"
     bindsym shift+s exec poweroff, mode "default"
+    bindsym r       exec systemctl reboot
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -119,16 +120,18 @@ for_window [instance="afloatingwindow"] floating enable
 for_window [class="Atom"] move to workspace $workspace2
 for_window [class="Telegram"] move to workspace $workspace9
 for_window [class="Spotify"] move to workspace $workspace6
+for_window [class="VLC"] move to workspace $workspace8
 
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+s exec env firefox; exec atom; exec spotify
-bindsym $mod+a mode "launcher"
 
+bindsym $mod+a mode "launcher"
 mode "launcher" {
     bindsym f exec env firefox, mode "default"
     bindsym a exec atom, mode "default"; workspace $workspace2
     bindsym s exec spotify, mode "default"; workspace $workspace6
     bindsym t exec telegram-desktop, mode "default"; workspace $workspace9
+    bindsym v exec vlc, mode "default"; workspace $workspace8
     bindsym p exec urxvt -name "floatingterm" -e alsamixer, mode "default"
     bindsym n exec urxvt -geometry 90x35-0-25 -name "floatingterm" -e nmtui, mode "default"
     bindsym r exec urxvt -e ranger, mode "default"
@@ -278,9 +281,10 @@ set $fg     #f0f8ff
 
 
 set_from_resource $bg0 color0    #282828
+set_from_resource $bg1 color11   #373b41
 set_from_resource $red color1    #ee4035
 set_from_resource $blu color4    #0392cf
-set_from_resource $fg2 color7    #ebdbb2
+set_from_resource $fg2 color7    #dcbf7a
 set_from_resource $fg1 color15   #333333
 
 # window colors
@@ -296,7 +300,7 @@ bar {
     status_command i3blocks -c ~/.config/i3/.i3blocks.conf
     i3bar_command i3bar -t
     tray_output primary
-    font xft: Overpass 8.5
+    font xft: Overpass 8
     strip_workspace_numbers yes
     height 20
 
@@ -307,7 +311,7 @@ bar {
 
        #                    border  bg      text
        focused_workspace    $blu    $blu    $fg2
-       active_workspace     $bg0    $bg0    $fg2
+       active_workspace     $bg0    $blu    $fg2
        inactive_workspace   $bg0    $bg0    $fg2
        urgent_workspace     $red    $red    $fg2
 

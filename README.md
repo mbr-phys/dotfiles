@@ -37,7 +37,7 @@ Most of this has been taken from a friend's configs and then customised for my o
 
 * for a recorded list of all installed packages:
 	- `pacman -Qqen > ~/dotfiles/packages/packages.txt` for [official Arch](https://www.archlinux.org/packages/) packages
-	- `pacman -Qqem > ~/dotfiles/packages/AURpackages.txt` for [AUR packages](https://aur.archlinux.org/)
+	- `pacman -Qqem > ~/dotfiles/packages/aurpackages.txt` for [aur packages](https://aur.archlinux.org/)
 
 ---
 
