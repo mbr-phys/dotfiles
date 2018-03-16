@@ -12,7 +12,8 @@ set $mod Mod4
 
 exec compton -b --xrender-sync --xrender-sync-fence
 exec --no-startup-id dunst
-exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/wallpaper141.jpg
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/Solar.png
 exec xss-lock ~/.config/i3/scripts/lock
 
 #--randomise on wallpaper to jig it up
@@ -55,16 +56,16 @@ mode "power" {
 
 # WORKSPACE SETTINGS #######################
 
-set $workspace1 "1:1 "
-set $workspace2 "2:2 "
-set $workspace3 "3:3 "
-set $workspace4 "4:4 "
-set $workspace5 "5:5 "
-set $workspace6 "6:6 "
-set $workspace7 "7:7 "
-set $workspace8 "8:8 "
-set $workspace9 "9:9 "
-set $workspace0 "0:0 "
+set $workspace1 "1 "
+set $workspace2 "2 "
+set $workspace3 "3 "
+set $workspace4 "4 "
+set $workspace5 "5 "
+set $workspace6 "6 "
+set $workspace7 "7 "
+set $workspace8 "8 "
+set $workspace9 "9 "
+set $workspace0 "0 "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -296,27 +297,27 @@ client.urgent           $red    $bg0        $fg1    $blu
 
 # BAR SETTINGS ##############################
 
-bar {
-    status_command i3blocks -c ~/.config/i3/.i3blocks.conf
-    i3bar_command i3bar -t
-    tray_output primary
-    font xft: Overpass 8
-    strip_workspace_numbers yes
-    height 20
-
-    colors {
-       separator  $bg0
-       background $bg0
-       statusline $bg0
-
-       #                    border  bg      text
-       focused_workspace    $blu    $blu    $fg2
-       active_workspace     $bg0    $blu    $fg2
-       inactive_workspace   $bg0    $bg0    $fg2
-       urgent_workspace     $red    $red    $fg2
-
-
-   }
-}
-
-bindsym $mod+shift+b bar mode toggle
+#bar {
+#    status_command i3blocks -c ~/.config/i3/.i3blocks.conf
+#    i3bar_command i3bar -t
+#    tray_output primary
+#    font xft: Overpass 8
+#    strip_workspace_numbers yes
+#    height 20
+#
+#    colors {
+#       separator  $bg0
+#       background $bg0
+#       statusline $bg0
+#
+#       #                    border  bg      text
+#       focused_workspace    $blu    $blu    $fg2
+#       active_workspace     $bg0    $blu    $fg2
+#       inactive_workspace   $bg0    $bg0    $fg2
+#       urgent_workspace     $red    $red    $fg2
+#
+#
+#   }
+#}
+#
+#bindsym $mod+shift+b bar mode toggle

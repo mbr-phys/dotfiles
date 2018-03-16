@@ -1,0 +1,9 @@
+#!/bin/bash
+
+icon=~/.config/i3/scripts/lock.png
+background=/tmp/screenshot.png
+
+ffmpeg -y -loglevel 0 -s 1920x1080 -f x11grab -i $DISPLAY -vframes 1 -vf "gblur=sigma=8" "$background"
+ffmpeg -y -i "$background" -i "$icon" -filter_complex "overlay=x=(main_w-overlay_w)/2:y=(main_h-overlay_h)/2" "$background"
+
+i3lock -i "$background" -e --insidevercolor=00000000 --insidewrongcolor=00000000 --insidecolor=00000000 --ringvercolor=7bc043ff --ringwrongcolor=ee4035ff --ringcolor=9e379fff --linecolor=00000000 --separatorcolor=00000000 --textcolor=00000000 --keyhlcolor=7bb3ffff --bshlcolor=7bb3ffff

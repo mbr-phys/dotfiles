@@ -1,0 +1,312 @@
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #222
+background-alt = #444
+;foreground = ${xrdb:color7:#222}
+foreground = #dcbf7a
+foreground-alt = #555
+primary = #0392cf
+secondary = #f37736
+alert = #ee4035
+
+[bar/example]
+bottom = true
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 23
+;offset-x = 1%
+;offset-y = 200%
+radius = 6.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 2
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = Overpass:pixelsize=9;1
+font-1 = Overpass:fontformat=truetype:size=8:antialias=false;0
+font-2 = FontAwesome:pixelsize=10;1
+
+modules-left = bspwm i3
+modules-center =
+modules-right = xwindow sep pulseaudio disk wlan eth vpn xbacklight battery date1 date2
+
+tray-position = right
+tray-padding = 2
+;tray-transparent = true
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+;cursor-scroll = ns-resize
+
+[module/xwindow]
+type = internal/xwindow
+label = %title%
+format-overline = #e1c98e
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-overline = ${colors.secondary}
+
+label-layout = %layout%
+label-layout-overline = ${colors.secondary}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-overline = ${colors.secondary}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-overline= ${colors.primary}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = %index%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+enable-scroll = true
+enable-click = true
+
+pin-workspaces = true
+ws-icon-0 = 0 
+ws-icon-1 = 1 
+ws-icon-2 = 2 
+ws-icon-3 = 3 
+ws-icon-4 = 4 
+ws-icon-5 = 5 
+ws-icon-6 = 6 
+ws-icon-7 = 7 
+ws-icon-8 = 8 
+ws-icon-9 = 9 
+
+label-mode-padding = 1
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.background-alt}
+label-mode-overline = ${colors.alert}
+
+label-focused = %name%
+label-focused-background = ${module/bspwm.label-focused-background}
+label-focused-overline = ${module/bspwm.label-focused-overline}
+label-focused-padding = ${module/bspwm.label-focused-padding}
+
+label-unfocused = %name%
+label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+
+label-visible = %name%
+label-visible-background = ${self.label-focused-background}
+label-visible-overline = ${self.label-focused-overline}
+label-visible-padding = ${self.label-focused-padding}
+
+label-urgent-background = ${module/bspwm.label-urgent-background}
+label-urgent-padding = ${module/bspwm.label-urgent-padding}
+
+
+[module/sep]
+type = custom/script
+exec = echo '          '
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label>
+label = %percentage%%
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-overline = #0392cf
+
+[module/disk]
+type = custom/script
+exec = ~/dotfiles/polybar/.config/polybar/scripts/disk
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-overline = #f37736
+
+[module/wlan]
+type = custom/script
+exec = ~/dotfiles/polybar/.config/polybar/scripts/wireless
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-overline = #ee4035
+
+[module/eth]
+type = internal/network
+interface = tun0
+interval = 3.0
+
+format-connected-overline = #ee4035
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-overline = ${self.format-connected-overline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/vpn]
+type = custom/script
+exec = systemctl is-active openvpn-client@protonvpn.service
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-overline = #7bc043
+
+[module/date1]
+type = internal/date
+interval = 5
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-overline = #e69d6e
+
+label = %time%
+
+[module/date2]
+type = internal/date
+interval = 5
+
+date = %d-%m-%Y
+date-alt = " %Y-%m-%d"
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-overline = #e69d6e
+
+label = %date%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume>
+format-volume-overline = #e34add
+label-volume =  %percentage%%
+label-volume-foreground = ${root.foreground}
+
+label-muted =  
+label-muted-foreground = ${root.foreground}
+format-muted-overline = #e34add
+
+[module/battery]
+type = custom/script
+exec = ~/dotfiles/polybar/.config/polybar/scripts/battery.py
+format-overline = #ffc425
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
+
+
+
+
+
+
+
+
+;[module/alsa]
+;type = internal/alsa
+;
+;format-volume = <label-volume> <bar-volume>
+;label-volume = VOL
+;label-volume-foreground = ${root.foreground}
+;
+;format-muted-prefix = " "
+;format-muted-foreground = ${colors.foreground-alt}
+;label-muted = sound muted
+;
+;bar-volume-width = 10
+;bar-volume-foreground-0 = #55aa55
+;bar-volume-foreground-1 = #55aa55
+;bar-volume-foreground-2 = #55aa55
+;bar-volume-foreground-3 = #55aa55
+;bar-volume-foreground-4 = #55aa55
+;bar-volume-foreground-5 = #f5a70a
+;bar-volume-foreground-6 = #ff5555
+;bar-volume-gradient = false
+;bar-volume-indicator = |
+;bar-volume-indicator-font = 2
+;bar-volume-fill = ─
+;bar-volume-fill-font = 2
+;bar-volume-empty = ─
+;bar-volume-empty-font = 2
+;bar-volume-empty-foreground = ${colors.foreground-alt}
