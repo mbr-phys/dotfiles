@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
 from subprocess import check_output
+import re
 
 output = check_output("acpi").split()
 fulltext = ""
-percent = int(str(output[3])[2:-3])
+
+powers = re.findall(r'\d+', str(output[3]))
+percent = int(powers[0])
 
 if str(output[2])[2:-2] == "Charging":
     fulltext += " "

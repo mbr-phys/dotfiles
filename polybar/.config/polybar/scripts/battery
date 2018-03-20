@@ -28,7 +28,7 @@ if ($status eq 'Charging') {
 } elsif ($percent < 10) {
     $output .= ' ';
     # continuously annoy me until I plug in my charger
-    system 'paplay ~/.config/i3/scripts/notification.ogg';
+    # system 'paplay ~/.config/i3/scripts/notification.ogg';
 } elsif ($percent < 30) {
     $output .= ' ';
 } elsif ($percent < 60) {

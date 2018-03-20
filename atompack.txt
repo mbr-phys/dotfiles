@@ -1,0 +1,11 @@
+atom-python-run
+count-word
+file-icons
+gruvbox
+gruvbox-dark-ui
+language-latex
+latex
+latex-completions
+markdown-preview-plus
+minimap
+relative-numbers

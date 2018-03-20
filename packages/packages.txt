@@ -14,6 +14,7 @@ bluez
 bluez-utils
 bzip2
 cbatticon
+cmake
 compton
 coreutils
 cryptsetup
@@ -75,6 +76,7 @@ man-pages
 mdadm
 mypaint
 nano
+neofetch
 neovim
 netctl
 network-manager-applet
@@ -105,6 +107,7 @@ python-ipywidgets
 python-pip
 python-powerline
 python2-ipykernel
+qt4
 ranger
 reiserfsprogs
 rofi
@@ -146,6 +149,7 @@ unrar
 usbutils
 util-linux
 vi
+vlc
 which
 xf86-video-amdgpu
 xf86-video-intel
@@ -208,3 +212,4 @@ zathura-pdf-poppler
 zip
 zsh
 zsh-completions
+zsh-syntax-highlighting

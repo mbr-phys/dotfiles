@@ -24,7 +24,7 @@ Most of this has been taken from a friend's configs and then customised for my o
 #### terminal
 
 * emulator is [urxvt](https://wiki.archlinux.org/index.php/Rxvt-unicode), shell is [zsh](https://wiki.archlinux.org/index.php/zsh)
-* shell prompt is [gallifrey theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes), would use agnoster's but can't get it to work?
+* shell prompt is [agnosters theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)
 
 #### utilities
 
