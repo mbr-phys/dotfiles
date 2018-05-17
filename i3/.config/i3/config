@@ -14,7 +14,7 @@ exec compton -b --xrender-sync --xrender-sync-fence
 exec --no-startup-id dunst
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/Solar.png
-exec xss-lock ~/.config/i3/scripts/lock
+exec xss-lock ~/dotfiles/i3/.config/i3/scripts/lock-alt
 
 #--randomise on wallpaper to jig it up
 # GENERAL #######################
@@ -45,7 +45,7 @@ bindsym $mod+x exec --no-startup-id scrot ~/Desktop/%Y-%m-%d-%T-screen.png
 bindsym $mod+p mode "power"
 mode "power" {
     bindsym e       exit, mode "default"
-    bindsym l       exec ~/.config/i3/scripts/lock, mode "default"
+    bindsym l       exec betterlockscreen -l blur, mode "default"
     bindsym shift+s exec poweroff, mode "default"
     bindsym r       exec systemctl reboot
 
@@ -124,7 +124,7 @@ for_window [class="Spotify"] move to workspace $workspace6
 for_window [class="VLC"] move to workspace $workspace8
 
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+s exec env firefox; exec atom; exec spotify
+bindsym $mod+s exec env firefox; exec i3-sensible-terminal; exec spotify
 
 bindsym $mod+a mode "launcher"
 mode "launcher" {
@@ -134,6 +134,7 @@ mode "launcher" {
     bindsym t exec telegram-desktop, mode "default"; workspace $workspace9
     bindsym v exec vlc, mode "default"; workspace $workspace8
     bindsym p exec urxvt -name "floatingterm" -e alsamixer, mode "default"
+    bindsym e exec urxvt -name "floatingterm", mode "default"
     bindsym n exec urxvt -geometry 90x35-0-25 -name "floatingterm" -e nmtui, mode "default"
     bindsym r exec urxvt -e ranger, mode "default"
 
@@ -183,31 +184,37 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+w mode "window"
+mode "window" {
+    # split in horizontal orientation
+    bindsym h split h
 
-# split in vertical orientation
-bindsym $mod+v split v
+    # split in vertical orientation
+    bindsym v split v
 
-# enter fullscreen mode for the focused container
-bindsym $mod+b fullscreen toggle
+    # enter fullscreen mode for the focused container
+    bindsym b fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+t layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+    # change container layout (stacked, tabbed, toggle split)
+    bindsym t layout stacking
+    bindsym w layout tabbed
+    bindsym e layout toggle split
 
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+    # toggle tiling / floating
+    bindsym Shift+space floating toggle
 
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+    # change focus between tiling / floating windows
+    bindsym space focus mode_toggle
 
-# focus the parent container
-bindsym $mod+Shift+a focus parent
+    # focus the parent container
+    bindsym Shift+a focus parent
 
-# focus the child container
-#bindsym $mod1+d focus child
+    # focus the child container
+    #bindsym d focus child
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 #focus mode
 bindsym $mod+Shift+f exec --no-startup-id ~/.config/i3/scripts/focus.py
@@ -241,7 +248,7 @@ mode "resize" {
 gaps inner 12
 gaps outer 4
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 
 
 ##################################################
@@ -295,29 +302,3 @@ client.unfocused        $bg0    $bg0        $fg1    $blu
 client.focused_inactive $fg2    $bg0        $fg1    $blu
 client.urgent           $red    $bg0        $fg1    $blu
 
-# BAR SETTINGS ##############################
-
-#bar {
-#    status_command i3blocks -c ~/.config/i3/.i3blocks.conf
-#    i3bar_command i3bar -t
-#    tray_output primary
-#    font xft: Overpass 8
-#    strip_workspace_numbers yes
-#    height 20
-#
-#    colors {
-#       separator  $bg0
-#       background $bg0
-#       statusline $bg0
-#
-#       #                    border  bg      text
-#       focused_workspace    $blu    $blu    $fg2
-#       active_workspace     $bg0    $blu    $fg2
-#       inactive_workspace   $bg0    $bg0    $fg2
-#       urgent_workspace     $red    $red    $fg2
-#
-#
-#   }
-#}
-#
-#bindsym $mod+shift+b bar mode toggle

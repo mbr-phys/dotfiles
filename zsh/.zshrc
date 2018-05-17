@@ -18,8 +18,10 @@ source $ZSH/oh-my-zsh.sh
 powerline-daemon -q
 . /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
+
 alias please='sudo $(fc -ln -1)'
 alias e="exit"
+alias rm='rm -i'
 alias neotidy="clear && echo && neofetch"
 alias dirs='dirs -v'
 
@@ -39,12 +41,14 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
 alias conf="cd ~/dotfiles/i3/.config/i3/"
-alias notes="cd ~/library/TeX-Notes/Year\ 2/"
+alias tex="cd ~/library/TeX-Notes/Year\ 2/"
+alias notes="cd ~/library/PDF-Notes/Year\ 2/"
 alias lib="cd ~/library/"
 alias misc="cd ~/library/Misc/"
 alias labs="cd ~/library/Labs/Year\ 2/"
 alias dots="cd ~/dotfiles/"
 alias zs="cd ~/dotfiles/zsh/"
+alias vs="cd ~/dotfiles/vim"
 alias poly="cd ~/dotfiles/polybar/.config/polybar/"
 
 alias firefox="GTK_THEME=Adwaita:light firefox"

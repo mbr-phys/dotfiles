@@ -7,22 +7,31 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-"Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 Plugin 'lervag/vimtex'
 "Plugin 'valloric/youcompleteme'
 Plugin 'airblade/vim-gitgutter'
 "Plugin 'tpope/vim-fugitive'
 Plugin 'morhetz/gruvbox'
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
+Plugin 'powerline/powerline'
 
-"let g:vimtex_view_method = 'zathura'
-
-
+let g:vimtex_view_method = 'zathura'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+let g:goyo_width = 100
 
+let g:limelight_conceal_ctermfg = 240
+let g:limelight_conceal_guifg = '#404040'
+let g:limelight_default_coefficient = 0.5
+
+autocmd VimEnter * Goyo
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 
 let mapleader = ","
@@ -90,6 +99,10 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 
+nnoremap <leader>, :!pandoc % -o '%:r'.pdf<cr><cr>
+
+command Q execute "q|q"
+command W execute "wq|q"
 
 nnoremap <C-n> :NERDTreeToggle<CR>
 
