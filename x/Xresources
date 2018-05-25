@@ -47,7 +47,7 @@ Xft.lcdfilter: lcddefault
 
 
 ! rofi
-rofi.font: Overpass 12
+rofi.font: Overpass 10
 rofi.width: 30
 rofi.lines: 5
 rofi.columns: 1
@@ -66,7 +66,7 @@ rofi.fuzzy: false
 rofi.yoffset: 0!-25
 
 URxvt.urlLauncher:              firefox
-URxvt.font:                     xft:Hack:size=9
+URxvt.font:                     xft:Fira Mono for Powerline:size=9, xft:IMB 3270:size=10, xft:Meslo LG S for Powerline:size=10
 URxvt.letterSpace:              -1
 URxvt*scrollTtyOutput:          false
 URxvt*scrollTtyKeypress:        true
