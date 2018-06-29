@@ -1,8 +1,0 @@
-#!/bin/bash
-
-echo $([[ -z "$(iwgetid -r)" ]] || echo "$(iwgetid -r)")
-if [ -n "$BLOCK_BUTTON" ]
-then
-    urxvt -geometry 90x35-0-25 -name "afloatingwindow" -e nmtui &
-    echo $([[ -z "$(iwgetid -r)" ]] || echo "$(iwgetid -r)")
-fi

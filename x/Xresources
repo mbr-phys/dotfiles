@@ -47,7 +47,7 @@ Xft.lcdfilter: lcddefault
 
 
 ! rofi
-rofi.font: Overpass 10
+rofi.font: Overpass 11
 rofi.width: 30
 rofi.lines: 5
 rofi.columns: 1

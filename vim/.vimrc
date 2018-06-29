@@ -7,7 +7,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 Plugin 'lervag/vimtex'
 "Plugin 'valloric/youcompleteme'
 Plugin 'airblade/vim-gitgutter'
@@ -29,10 +29,11 @@ let g:limelight_conceal_ctermfg = 240
 let g:limelight_conceal_guifg = '#404040'
 let g:limelight_default_coefficient = 0.5
 
+let g:powerline_pycmd="py3"
+
 autocmd VimEnter * Goyo
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-
 
 let mapleader = ","
 let maplocalleader = "\\"
@@ -45,8 +46,6 @@ nnoremap <leader>( viw<esc>a)<esc>bi(<esc>lel
 nnoremap <leader>[ viw<esc>a]<esc>bi[<esc>lel
 nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>lel
 
-
-
 set t_Co=256
 colorscheme gruvbox
 syntax enable
@@ -54,6 +53,7 @@ syntax enable
 set tabstop=4 " visual spaces per tab
 set softtabstop=4
 set expandtab " actually makes tabs spaces
+set laststatus=2
 
 
 "" COMMANDS/UI
@@ -105,6 +105,5 @@ command Q execute "q|q"
 command W execute "wq|q"
 
 nnoremap <C-n> :NERDTreeToggle<CR>
-
 
 nnoremap <F3> :w<CR>:!git latexdiff HEAD~0 --no-view -o diff.pdf<CR>

@@ -162,7 +162,7 @@ exec = echo '          '
 
 [module/player-simple]
 type = custom/script
-exec = ~/.config/polybar/scripts/player-simple.sh
+exec = ~/dotfiles/scripts/player-simple.sh
 interval = 2
 
 format-overline = #f33ca8
@@ -184,14 +184,17 @@ format-overline = #0392cf
 
 [module/disk]
 type = custom/script
-exec = ~/dotfiles/polybar/.config/polybar/scripts/disk
+exec = ~/dotfiles/scripts/disk
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-overline = #f37736
 
+click-left = exec urxvt -geometry 90x35-0-25 -name "floatingterm" -e ranger
+click-right = exec rofi -show drun
+
 [module/wlan]
 type = custom/script
-exec = ~/dotfiles/polybar/.config/polybar/scripts/wireless
+exec = ~/dotfiles/scripts/wireless
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-overline = #ee4035
@@ -215,10 +218,12 @@ format-disconnected =
 
 [module/vpn]
 type = custom/script
-exec = ~/dotfiles/polybar/.config/polybar/scripts/isrunning-openvpn.sh
+exec = ~/dotfiles/scripts/isrunning-openvpn.sh
 interval = 5
 
-#click-left = exec systemct
+click-left = exec urxvt -geometry 70x15-0-25 -name "floatingterm" -e systemctl start openvpn-client@client.service
+click-right = exec urxvt -geometry 70x15-0-25 -name "floatingterm" -e systemctl stop openvpn-client@client.service
+click-middle = exec urxvt -geometry 70x15-0-25 -name "floatingterm" -e systemctl restart openvpn-client@client.service
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
@@ -253,7 +258,7 @@ label = %date%
 [module/volume]
 type = internal/volume
 #type = custom/script
-#exec = ~/dotfiles/polybar/.config/polybar/scripts/volume
+#exec = ~/dotfiles/scripts/volume
 #
 format-volume = <label-volume>
 format-volume-overline = #e34add
@@ -268,7 +273,7 @@ format-muted-overline = #e34add
 
 [module/battery]
 type = custom/script
-exec = ~/dotfiles/polybar/.config/polybar/scripts/battery.py
+exec = ~/dotfiles/scripts/battery.py
 format-overline = #ffc425
 
 [settings]
