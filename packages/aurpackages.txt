@@ -2,7 +2,6 @@ anaconda2
 aurman-git
 bashmount
 betterlockscreen-git
-evince-light
 gksu
 i3-gaps-next-git
 i3blocks-gaps-git
@@ -14,11 +13,10 @@ nsnake
 oh-my-zsh-git
 otf-font-awesome-4
 package-query
+pcmciautils
 polybar
 powerline-console-fonts
 spotify
-telegram-desktop-bin
 ttf-font-awesome-4
-ttf-iosevka
 xss-lock-git
 zsh-syntax-highlighting-git
