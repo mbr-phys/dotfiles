@@ -3,9 +3,7 @@ aurman-git
 bashmount
 betterlockscreen-git
 gksu
-i3-gaps-next-git
 i3blocks-gaps-git
-i3lock-color-git
 light-git
 masterpdfeditor
 nerd-fonts-git
