@@ -74,6 +74,8 @@ URxvt*scrollBar:                false
 URxvt*mouseWheelScrollPage:     false
 URxvt*cursorBlink:              true
 URxvt*saveLines:                5000
+URxvt.transparent:              true
+URxvt.shading:                  20
 
 URxvt.cursorColor:          #ebdbb2
 URxvt.background:           #282828

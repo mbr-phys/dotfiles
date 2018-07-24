@@ -15,8 +15,8 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
-powerline-daemon -q
-. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+#powerline-daemon -q
+#. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 
 alias please='sudo $(fc -ln -1)'
@@ -44,7 +44,7 @@ alias conf="cd ~/dotfiles/i3/.config/i3/"
 alias tex="cd ~/library/TeX-Notes/Year\ 2/"
 alias notes="cd ~/library/PDF-Notes/Year\ 2/"
 alias lib="cd ~/library/"
-alias misc="cd ~/library/Misc/"
+alias misc="cd ~/library/misc/"
 alias labs="cd ~/library/Labs/Year\ 2/"
 alias dots="cd ~/dotfiles/"
 alias zs="cd ~/dotfiles/zsh/"

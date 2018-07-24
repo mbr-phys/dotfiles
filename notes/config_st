@@ -1,3 +1,4 @@
+
 #   general
 #   workspace settings
 #   config
@@ -9,11 +10,14 @@
 
 set $mod Mod4
 
+set $term st
+
 exec compton -b --xrender-sync --xrender-sync-fence
 exec --no-startup-id dunst
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/tron.jpg
+exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/cp77.jpg
 exec xss-lock ~/dotfiles/scripts/lock-alt
+exec --no-startup-id $term -n "popup" -e tmux
 
 #--randomise on wallpaper to jig it up
 # GENERAL #######################
@@ -22,7 +26,7 @@ font xft:Overpass 9
 hide_edge_borders both
 floating_modifier $mod
 
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec st
 bindsym --release $mod+Shift+Return exec ~/dotfiles/scripts/drawterm
 bindsym $mod+q kill
 bindsym $mod+Shift+r restart
@@ -116,7 +120,7 @@ bindsym $mod+Ctrl+Right move workspace to output right
 
 for_window [title="alsamixer"] floating enable border pixel 0
 for_window [class="GParted"] floating enable
-for_window [class="URxvt" instance="floatingterm"] floating enable
+for_window [class="$term" instance="floatingterm"] floating enable
 for_window [instance="afloatingwindow"] floating enable
 
 for_window [class="Atom"] move to workspace $workspace2
@@ -134,12 +138,12 @@ mode "launcher" {
     bindsym s exec spotify, mode "default"; workspace $workspace6
     bindsym t exec telegram-desktop, mode "default"; workspace $workspace9
     bindsym v exec vlc, mode "default"; workspace $workspace8
-    bindsym p exec urxvt -name "floatingterm" -e alsamixer, mode "default"
-    bindsym e exec urxvt -geometry 90x35-0-25 -name "floatingterm", mode "default"
-    bindsym n exec urxvt -geometry 90x35-0-25 -name "floatingterm" -e nmtui, mode "default"
-    bindsym r exec urxvt -geometry 90x35-0-25 -name "floatingterm" -e ranger, mode "default"
+    bindsym p exec $term -n "floatingterm" -e alsamixer, mode "default"
+    bindsym e exec $term -g 90x35-0-25 -n "floatingterm", mode "default"
+    bindsym n exec $term -g 90x35-0-25 -n "floatingterm" -e nmtui, mode "default"
+    bindsym r exec $term -g 90x35-0-25 -n "floatingterm" -e ranger, mode "default"
     bindsym --release Shift+Return exec ~/dotfiles/scripts/drawterm, mode "default"
-    bindsym Return exec urxvt, mode "default"
+    bindsym Return exec $term, mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -303,4 +307,5 @@ set_from_resource $fg1 color15   #333333
 client.focused          $fg1    $fg1        $fg1    $blu
 client.unfocused        $bg0    $bg0        $fg1    $blu
 client.focused_inactive $fg2    $bg0        $fg1    $blu
-client.urgent $red $bg0 $fg1 $blu
+client.urgent           $red    $bg0        $fg1    $blu
+

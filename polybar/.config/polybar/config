@@ -1,6 +1,6 @@
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #5a000000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dcbf7a
@@ -13,7 +13,7 @@ alert = #ee4035
 bottom = true
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 21
+height = 25
 ;offset-x = 1%
 ;offset-y = 0
 radius = 6.0
@@ -38,7 +38,7 @@ font-1 = Overpass:fontformat=truetype:size=9:antialias=false;0
 font-2 = FontAwesome:pixelsize=9;1
 
 modules-left = bspwm i3 
-modules-center = player-simple
+modules-center = sep xwindow
 modules-right = volume disk wlan eth vpn xbacklight battery date1 date2
 
 tray-position = right
@@ -62,7 +62,7 @@ scroll-down = i3wm-wsprev
 
 [module/xwindow]
 type = internal/xwindow
-label = %title%
+label = %title:0:30:...%
 format-overline = #e1c98e
 
 [module/xkeyboard]
