@@ -32,8 +32,8 @@ let g:limelight_default_coefficient = 0.5
 let g:powerline_pycmd="py3"
 
 autocmd VimEnter * Goyo
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
+autocmd! User GoyoEnter 
+autocmd! User GoyoLeave
 
 let mapleader = ","
 let maplocalleader = "\\"
@@ -85,19 +85,19 @@ set noswapfile
 set pastetoggle=<F2>
 
 nnoremap ; :
-inoremap <esc> <nop>
+"inoremap <esc> <nop>
 inoremap jk <esc>
 inoremap kj <esc>
 
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
+"inoremap <up> <nop>
+"inoremap <down> <nop>
+"inoremap <left> <nop>
+"inoremap <right> <nop>
+"
+"nnoremap <up> <nop>
+"nnoremap <down> <nop>
+"nnoremap <left> <nop>
+"nnoremap <right> <nop>
 
 nnoremap <leader>, :!pandoc % -o '%:r'.pdf<cr><cr>
 
