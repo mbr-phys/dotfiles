@@ -2,10 +2,14 @@ anaconda2
 aurman-git
 bashmount
 betterlockscreen-git
+discord
 gksu
+i3-gaps-next-git
 i3blocks-gaps-git
+i3lock-color-git
 light-git
 masterpdfeditor
+meh-git
 nerd-fonts-git
 nsnake
 oh-my-zsh-git
@@ -14,7 +18,10 @@ package-query
 pcmciautils
 polybar
 powerline-console-fonts
+rar
 spotify
 ttf-font-awesome-4
+xflux
+xflux-gui-git
 xss-lock-git
 zsh-syntax-highlighting-git
