@@ -7,16 +7,12 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-"Plugin 'bling/vim-airline'
 Plugin 'lervag/vimtex'
-"Plugin 'valloric/youcompleteme'
-Plugin 'airblade/vim-gitgutter'
-"Plugin 'tpope/vim-fugitive'
 Plugin 'morhetz/gruvbox'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
-Plugin 'powerline/powerline'
+Plugin 'itchyny/lightline.vim'
 
 let g:vimtex_view_method = 'zathura'
 
@@ -30,6 +26,10 @@ let g:limelight_conceal_guifg = '#404040'
 let g:limelight_default_coefficient = 0.5
 
 let g:powerline_pycmd="py3"
+
+let g:lightline = {
+    \ 'colorscheme': 'jellybeans',
+    \ }
 
 autocmd VimEnter * Goyo
 autocmd! User GoyoEnter 

@@ -46,7 +46,7 @@ alias lib="cd ~/library/"
 alias misc="cd ~/library/misc/"
 alias cyb="cd ~/library/misc/dnd/cyber/"
 alias bar="cd ~/library/misc/bar/"
-alias quark="cd ~/library/quarkonium/"
+alias quark="cd ~/library/quarkonium/quark/"
 alias labs="cd ~/library/Labs/"
 alias dots="cd ~/dotfiles/"
 alias zs="cd ~/dotfiles/zsh/"
@@ -59,6 +59,7 @@ alias vim="vim --servername VIM"
 alias zathura="zathura --fork"
 alias pdflatexd="pdflatex -output-directory=./latex-output"
 alias steam="flatpak run com.valvesoftware.Steam"
+alias timet="zathura ~/library/IDocs/timetable.pdf && e"
 
 #this is mostly stolen then tweaked from a friend
 autoload -Uz promptinit && promptinit
