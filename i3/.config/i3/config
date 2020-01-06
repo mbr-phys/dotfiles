@@ -136,7 +136,7 @@ mode "launcher" {
     bindsym m exec spotify, mode "default"; workspace $workspace6
     bindsym t exec telegram-desktop, mode "default"; workspace $workspace9
     bindsym v exec vlc, mode "default"; workspace $workspace8
-    bindsym s exec flatpak run com.valvesoftware.Steam, mode "default"; workspace $workspace7
+#    bindsym s exec flatpak run com.valvesoftware.Steam, mode "default"; workspace $workspace7
     bindsym p exec urxvt -name "floatingterm" -e alsamixer, mode "default"
     bindsym e exec urxvt -geometry 70x25-0-30 -name "floatingterm", mode "default"
     bindsym n exec urxvt -geometry 70x25-0-30 -name "floatingterm" -e nmtui, mode "default"
@@ -150,6 +150,15 @@ mode "launcher" {
     bindsym Escape mode "default"
 }
 
+bindsym $mod+g mode "gog"
+mode "gog" {
+    bindsym f exec ~/GOG\ Games/FTL\ Advanced\ Edition/start.sh, mode "default"
+    bindsym i exec ~/GOG\ Games/SHENZHEN\ IO/start.sh, mode "default"
+    bindsym o exec ~/GOG\ Games/Opus\ Magnum/start.sh, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 bindsym $mod+m mode "music"
 mode "music" {
