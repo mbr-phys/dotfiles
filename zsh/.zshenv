@@ -1,1 +1,1 @@
-export PATH=/opt/anaconda2/bin:$PATH
+#export PATH=/opt/anaconda2/bin:$PATH

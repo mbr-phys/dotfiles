@@ -1,6 +1,6 @@
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #5a000000
+background = #454545
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dcbf7a
@@ -221,9 +221,9 @@ type = custom/script
 exec = ~/dotfiles/scripts/isrunning-openvpn.sh
 interval = 5
 
-click-left = exec urxvt -geometry 70x15-0-30 -name "floatingterm" -e systemctl start openvpn-client@client.service
-click-right = exec urxvt -geometry 70x15-0-30 -name "floatingterm" -e systemctl stop openvpn-client@client.service
-click-middle = exec urxvt -geometry 70x15-0-30 -name "floatingterm" -e systemctl restart openvpn-client@client.service
+click-left = exec urxvt -geometry 70x15-0-30 -name "floatingterm" -e sudo protonvpn c 
+click-right = exec urxvt -geometry 70x15-0-30 -name "floatingterm" -e sudo protonvpn d
+click-middle = exec urxvt -geometry 70x15-0-30 -name "floatingterm" -e sudo protonvpn r
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
