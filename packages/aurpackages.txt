@@ -1,7 +1,9 @@
 bashmount
 betterlockscreen-git
+eigen-git
 gksu
 i3-gaps-next-git
+i3icons2-git
 i3lock-color-git
 light-git
 masterpdfeditor
@@ -10,9 +12,13 @@ nsnake
 oh-my-zsh-git
 otf-font-awesome-4
 package-query
+pikaur
+polybar-git
 powerline-console-fonts
-rar
+python-fontawesome
+rxvt-unicode-patched-with-truecolor
 spotify
+st
 ttf-font-awesome-4
 xflux
 xflux-gui-git
