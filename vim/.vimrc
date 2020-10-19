@@ -14,12 +14,13 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'itchyny/lightline.vim'
 
+let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-let g:goyo_width = 100
+let g:goyo_width = 110
 
 let g:limelight_conceal_ctermfg = 240
 let g:limelight_conceal_guifg = '#404040'

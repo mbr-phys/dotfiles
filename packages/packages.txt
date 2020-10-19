@@ -122,7 +122,6 @@ ranger
 redshift
 reiserfsprogs
 rofi
-rxvt-unicode
 rxvt-unicode-terminfo
 s-nail
 scrot
@@ -233,6 +232,5 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 zathura
-zathura-pdf-poppler
 zip
 zsh-completions
