@@ -49,6 +49,7 @@ nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>lel
 
 set t_Co=256
 colorscheme gruvbox
+set bg=dark
 syntax enable
 
 set tabstop=4 " visual spaces per tab
@@ -108,3 +109,5 @@ command W execute "wq|q"
 nnoremap <C-n> :NERDTreeToggle<CR>
 
 nnoremap <F3> :w<CR>:!git latexdiff HEAD~0 --no-view -o diff.pdf<CR>
+
+au BufNewFile,BufRead,BufReadPost *.qlua set syntax=lua

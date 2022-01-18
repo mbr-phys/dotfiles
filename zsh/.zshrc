@@ -15,6 +15,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 source ~/.local/share/fonts/i_fa.sh
+source /home/matthew/gpt/lib/cgpt/build/source.sh
 
 DEFAULT_USER="matthew"
 
@@ -31,6 +32,12 @@ alias gcm="git commit -m"
 alias gp="git push"
 alias gc="git checkout"
 
+alias klq="kinit -r 7d mblack@FNAL.GOV && ssh mblack@lq.fnal.gov"
+alias lq="ssh mblack@lq.fnal.gov"
+alias omni="ssh mb962356@omni.zimt.uni-siegen.de"
+alias iodine="ssh -J black@login1.tp.nt.uni-siegen.de black@iodine.tp.nt.uni-siegen.de"
+alias rubidium="ssh -J black@login1.tp.nt.uni-siegen.de black@rubidium.tp.nt.uni-siegen.de"
+
 alias /="cd /"
 alias ~="cd ~"
 alias ..="cd .."
@@ -40,17 +47,13 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
 alias conf="cd ~/dotfiles/i3/.config/i3/"
-alias tex="cd ~/library/TeX-Notes/Year\ 4/"
-alias notes="cd ~/library/PDF-Notes/Year\ 4/"
+alias sieg="cd ~/library/Siegen/"
+alias hdm="cd ~/library/Siegen/2HDM/"
+alias lat="cd ~/library/Siegen/LQCD/LatticeAnalyser/"
+alias qcd="cd ~/library/Siegen/LQCD/"
+alias tex="cd ~/library/Durham/TeX-Notes/Year\ 4/"
 alias lib="cd ~/library/"
 alias misc="cd ~/library/misc/"
-alias cyb="cd ~/library/misc/dnd/cyber/"
-alias bar="cd ~/library/misc/bar/"
-alias quark="cd ~/library/quarkonium/quark/"
-alias cpv="cd ~/library/cpviolation/"
-alias glob="cd ~/library/cpviolation/global"
-alias calcs="cd ~/library/cpviolation/calcs/"
-alias rep="cd ~/library/cpviolation/report/"
 alias pif="zathura ~/library/LaTeX-Templates/assorted/pifont.pdf"
 alias dots="cd ~/dotfiles/"
 alias zs="cd ~/dotfiles/zsh/"
@@ -62,8 +65,6 @@ alias firefox="GTK_THEME=Adwaita:light firefox"
 alias vim="vim --servername VIM"
 alias zathura="zathura --fork"
 alias pdflatexd="pdflatex -output-directory=./latex-output"
-alias steam="flatpak run com.valvesoftware.Steam"
-alias timet="zathura ~/library/IDocs/timetable.pdf && e"
 
 #this is mostly stolen then tweaked from a friend
 autoload -Uz promptinit && promptinit

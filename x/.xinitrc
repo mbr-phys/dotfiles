@@ -2,5 +2,5 @@
 setxkbmap gb
 xset -b
 # xetxkbmap -option caps:escape
-[[ -f ~/dotfiles/x/Xresources ]] && xrdb -I$HOME ~/dotfiles/x/Xresources
+[[ -f ~/Xresources ]] && xrdb -I$HOME ~/Xresources
 exec i3

@@ -13,7 +13,7 @@ exec compton -b --xrender-sync --xrender-sync-fence
 exec --no-startup-id dunst
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/jfo.jpg
-exec_always --no-startup-id xflux -l 55.9 -g -4.3 -k 3600
+exec_always --no-startup-id xflux -l 50.9 -g 8.0 -k 3600
 exec xss-lock ~/dotfiles/scripts/lock-diff
 
 #--randomise on wallpaper to jig it up
@@ -23,7 +23,7 @@ font xft:Overpass 9
 hide_edge_borders both
 floating_modifier $mod
 
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec urxvt 
 bindsym --release $mod+Shift+Return exec ~/dotfiles/scripts/drawterm
 bindsym $mod+q kill
 bindsym $mod+Shift+r restart
@@ -133,14 +133,16 @@ mode "launcher" {
     bindsym f exec env firefox, mode "default"
     bindsym q exec qutebrowser, mode "default"
     bindsym z exec zoom, mode "default"
+    bindsym m exec ~/Mathematica/Install/Executables/Mathematica, mode "default"
     bindsym a exec atom, mode "default"; workspace $workspace2
-    bindsym m exec spotify, mode "default"; workspace $workspace6
+    bindsym s exec spotify, mode "default"; workspace $workspace6
     bindsym t exec telegram-desktop, mode "default"; workspace $workspace9
     bindsym v exec vlc, mode "default"; workspace $workspace8
     bindsym p exec urxvt -name "floatingterm" -e alsamixer, mode "default"
     bindsym e exec urxvt -geometry 70x20-0-30 -name "floatingterm", mode "default"
     bindsym w exec urxvt -geometry 60x10-0-30 -name "floatingterm", mode "default"
     bindsym n exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e nmtui, mode "default"
+    bindsym c exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e python, mode "default"
     bindsym r exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e ranger, mode "default"
     bindsym x exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e sudo protonvpn c,mode "default"
     bindsym --release Shift+Return exec ~/dotfiles/scripts/drawterm, mode "default"
@@ -154,12 +156,11 @@ mode "launcher" {
 bindsym $mod+g mode "gog"
 mode "gog" {
     bindsym f exec ~/GOG\ Games/FTL\ Advanced\ Edition/start.sh, mode "default"
-    bindsym h exec ~/GOG\ Games/Human\ Resource\ Machine/start.sh, mode "default"
-    bindsym b exec ~/GOG\ Games/7\ Billion\ Humans/start.sh, mode "default"
-    bindsym e exec ~/GOG\ Games/EXAPUNKS/start.sh, mode "default"
-    bindsym m exec ~/GOG\ Games/MOLEK\ SYNTEZ/start.sh, mode "default"
-#    bindsym i exec ~/GOG\ Games/SHENZHEN\ IO/start.sh, mode "default"
-#    bindsym o exec ~/GOG\ Games/Opus\ Magnum/start.sh, mode "default"
+    bindsym p exec ~/GOG\ Games/Prison\ Architect/start.sh, mode "default"
+    bindsym m exec ~/GOG\ Games/Mini\ Metro/start.sh, mode "default"
+    bindsym s exec ~/GOG\ Games/MOLEK\ SYNTEZ/start.sh, mode "default"
+    bindsym l exec ~/GOG\ Games/Loop\ Hero/start.sh, mode "default"
+    bindsym o exec ~/GOG\ Games/Opus\ Magnum/start.sh, mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"

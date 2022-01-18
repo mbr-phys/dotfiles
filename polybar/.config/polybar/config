@@ -33,9 +33,9 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Overpass:pixelsize=10;1
-font-1 = Overpass:fontformat=truetype:size=10:antialias=false;0
-font-2 = FontAwesome:pixelsize=10;1
+font-0 = FontAwesome:style:Regular:pixelsize=10;1
+font-1 = Overpass:pixelsize=10;1
+font-2 = Overpass:fontformat=truetype:size=10:antialias=false;0
 
 modules-left = bspwm i3
 modules-center = sep xwindow
@@ -62,7 +62,7 @@ scroll-down = i3wm-wsprev
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:40:...%
 format-overline = #e1c98e
 
 [module/xkeyboard]
@@ -221,9 +221,9 @@ type = custom/script
 exec = ~/dotfiles/scripts/isrunning-openvpn.sh
 interval = 5
 
-click-left = exec urxvt -geometry 70x15-0-30 -name "floatingterm" -e sudo protonvpn c 
-click-right = exec urxvt -geometry 70x15-0-30 -name "floatingterm" -e sudo protonvpn d
-click-middle = exec urxvt -geometry 70x15-0-30 -name "floatingterm" -e sudo protonvpn r
+click-left = exec urxvt -geometry 70x15-0-30 -name "floatingterm" -e protonvpn-cli r
+click-right = exec urxvt -geometry 70x15-0-30 -name "floatingterm" -e protonvpn-cli d
+click-middle = exec urxvt -geometry 70x15-0-30 -name "floatingterm" -e protonvpn-cli c
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
