@@ -157,7 +157,7 @@ icon_path = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48
 frame_width = 1
 frame_color = "#B4B7B4"
 
-[shortcuts]
+#[shortcuts]
 
 # Shortcuts are specified as [modifier+][modifier+]...key
 # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",

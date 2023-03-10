@@ -1,9 +1,10 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible              
+filetype off                  
+set mouse=a
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
+"Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -17,8 +18,8 @@ Plugin 'itchyny/lightline.vim'
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()            
+filetype plugin indent on 
 
 let g:goyo_width = 110
 
@@ -26,18 +27,18 @@ let g:limelight_conceal_ctermfg = 240
 let g:limelight_conceal_guifg = '#404040'
 let g:limelight_default_coefficient = 0.5
 
-let g:powerline_pycmd="py3"
+let g:powerline_pycmd = 'py3'
 
 let g:lightline = {
     \ 'colorscheme': 'jellybeans',
     \ }
 
-autocmd VimEnter * Goyo
-autocmd! User GoyoEnter 
-autocmd! User GoyoLeave
+"autocmd VimEnter * Goyo
+"autocmd! User GoyoEnter 
+"autocmd! User GoyoLeave
 
-let mapleader = ","
-let maplocalleader = "\\"
+"let mapleader = ','
+"let maplocalleader = '\\'
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
@@ -52,9 +53,9 @@ colorscheme gruvbox
 set bg=dark
 syntax enable
 
-set tabstop=4 " visual spaces per tab
+set tabstop=4 
 set softtabstop=4
-set expandtab " actually makes tabs spaces
+set expandtab 
 set laststatus=2
 
 
@@ -71,8 +72,8 @@ set wildmenu
 set showmatch
 
 set relativenumber
-set incsearch 	" search as characters are entered
-set hlsearch 	" highlight matches
+set incsearch 	
+set hlsearch 	
 
 set autoindent
 set copyindent
@@ -110,4 +111,4 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 
 nnoremap <F3> :w<CR>:!git latexdiff HEAD~0 --no-view -o diff.pdf<CR>
 
-au BufNewFile,BufRead,BufReadPost *.qlua set syntax=lua
+au BufNewFile,BufRead,BufReadPost *.qlua set syntax = lua

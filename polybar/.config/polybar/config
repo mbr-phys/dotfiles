@@ -202,12 +202,12 @@ click-left = exec urxvt -geometry 70x25-0-30 -name "floatingterm" -e nmtui
 
 [module/eth]
 type = internal/network
-interface = tun0
+interface = enp59s0f1
 interval = 3.0
 
 format-connected-overline = #ee4035
 format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-prefix-foreground = ${colors.foreground}
 label-connected = %local_ip%
 
 format-disconnected =

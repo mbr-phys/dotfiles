@@ -1,15 +1,9 @@
-_not up to date_ 
-
 ### Dotfiles for Arch Linux
-
-Most of this has been taken from a friend's configs and then customised for my own preferences, some stuff also just from across the internet
-
----
 
 #### general windows management
 
-* [i3-gaps](https://github.com/Airblader/i3) - fork of i3 windows manager that incorporates gaps
-* [i3blocks-gaps](https://github.com/Airblader/i3blocks-gaps) - fork of i3blocks to work with i3-gaps
+* [i3-wm](https://i3wm.org/) 
+* [polybar](https://github.com/polybar/polybar) 
 * [i3lock-color](https://github.com/chrjguill/i3lock-color) - i3lock with more customisation
 
 #### fonts and colouring
@@ -17,21 +11,22 @@ Most of this has been taken from a friend's configs and then customised for my o
 * mixture of [gruvbox](https://github.com/morhetz/gruvbox) and base16-tomorrow-night
 * gtk theme
 * regular font - [overpass](http://overpassfont.org/)
-* terminal font - [hack](https://sourcefoundry.org/hack/)
+* terminal font - [FuraMono Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 
 #### browser
 
-* browser is firefox, customised appearance with `userChrome.css` - recommended by friend
+* browser is firefox, customised with `userChrome.css` 
 
 #### terminal
 
-* emulator is [urxvt](https://wiki.archlinux.org/index.php/Rxvt-unicode), shell is [zsh](https://wiki.archlinux.org/index.php/zsh)
-* shell prompt is [agnosters theme](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)
+* emulator is [urxvt](https://wiki.archlinux.org/index.php/Rxvt-unicode)
+* shell is [zsh](https://wiki.archlinux.org/index.php/zsh)
+* shell prompt is custom, see [zshrc](https://github.com/mbr-phys/dotfiles/blob/master/zsh/.zshrc)
 
 #### utilities
 
-* editors - [atom](https://atom.io/) and vim installed, mainly using atom
-* pdf viewer - [zathura](https://pwmt.org/projects/zathura/), also using firefox and atom sometimes
+* editors - vim
+* pdf viewer - [zathura](https://pwmt.org/projects/zathura/)
 * notifications - [dunst](https://dunst-project.org/)
 * launcher - [rofi](https://davedavenport.github.io/rofi/)
 

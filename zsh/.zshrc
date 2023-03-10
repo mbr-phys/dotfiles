@@ -12,11 +12,12 @@ fi
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 source ~/.local/share/fonts/i_fa.sh
 source /home/matthew/gpt/lib/cgpt/build/source.sh
 
+EDITOR=vim
 DEFAULT_USER="matthew"
 
 alias please='sudo $(fc -ln -1)'
@@ -27,6 +28,7 @@ alias dirs='dirs -v'
 
 alias g="git"
 alias ga="git add"
+alias gu="git add -u"
 alias gst="git status"
 alias gcm="git commit -m"
 alias gp="git push"
@@ -36,7 +38,11 @@ alias klq="kinit -r 7d mblack@FNAL.GOV && ssh mblack@lq.fnal.gov"
 alias lq="ssh mblack@lq.fnal.gov"
 alias omni="ssh mb962356@omni.zimt.uni-siegen.de"
 alias iodine="ssh -J black@login1.tp.nt.uni-siegen.de black@iodine.tp.nt.uni-siegen.de"
+alias bromine="ssh -J black@login1.tp.nt.uni-siegen.de black@bromine.tp.nt.uni-siegen.de"
 alias rubidium="ssh -J black@login1.tp.nt.uni-siegen.de black@rubidium.tp.nt.uni-siegen.de"
+alias rbc="ssh mblack@qcdserver13.phys.columbia.edu"
+alias rhqrep="git clone mblack@cuth00.phys.columbia.edu:/home/witzel/RepositoryRHQ.git"
+alias tursa="ssh dc-blac1@tursa.dirac.ed.ac.uk"
 
 alias /="cd /"
 alias ~="cd ~"
@@ -49,8 +55,11 @@ alias ......="cd ../../../../.."
 alias conf="cd ~/dotfiles/i3/.config/i3/"
 alias sieg="cd ~/library/Siegen/"
 alias hdm="cd ~/library/Siegen/2HDM/"
+alias higgs="cd ~/library/Siegen/2HDM/higgs-proj/"
 alias lat="cd ~/library/Siegen/LQCD/LatticeAnalyser/"
 alias qcd="cd ~/library/Siegen/LQCD/"
+alias gfr="cd ~/library/Siegen/LQCD/GFRenorm/"
+alias quc="cd ~/library/Siegen/QuantumComputing/"
 alias tex="cd ~/library/Durham/TeX-Notes/Year\ 4/"
 alias lib="cd ~/library/"
 alias misc="cd ~/library/misc/"
@@ -62,9 +71,14 @@ alias vs="cd ~/dotfiles/vim"
 alias poly="cd ~/dotfiles/polybar/.config/polybar/"
 
 alias firefox="GTK_THEME=Adwaita:light firefox"
-alias vim="vim --servername VIM"
+#alias vim="vim --servername VIM"
 alias zathura="zathura --fork"
+alias z="zathura"
 alias pdflatexd="pdflatex -output-directory=./latex-output"
+
+function psc() {
+    pass show -c $1
+}
 
 #this is mostly stolen then tweaked from a friend
 autoload -Uz promptinit && promptinit

@@ -41,6 +41,10 @@ bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
 bindsym Ctrl+XF86AudioLowerVolume exec amixer -q sset Master 1%-
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
+bindsym Ctrl+space exec dunstctl close
+bindsym Ctrl+Shift+space exec dunstctl close-all
+bindsym Ctrl+grave exec dunstctl history-pop
+
 bindsym $mod+x exec --no-startup-id scrot ~/Desktop/%d-%m_%T-screen.png
 bindsym --release $mod+Shift+x exec --no-startup-id scrot -s ~/Desktop/%d-%m_%T-select.png
 
@@ -134,9 +138,7 @@ mode "launcher" {
     bindsym q exec qutebrowser, mode "default"
     bindsym z exec zoom, mode "default"
     bindsym m exec ~/Mathematica/Install/Executables/Mathematica, mode "default"
-    bindsym a exec atom, mode "default"; workspace $workspace2
-    bindsym s exec spotify, mode "default"; workspace $workspace6
-    bindsym t exec telegram-desktop, mode "default"; workspace $workspace9
+    bindsym s exec steam, mode "default"; workspace $workspace7
     bindsym v exec vlc, mode "default"; workspace $workspace8
     bindsym p exec urxvt -name "floatingterm" -e alsamixer, mode "default"
     bindsym e exec urxvt -geometry 70x20-0-30 -name "floatingterm", mode "default"
@@ -144,7 +146,8 @@ mode "launcher" {
     bindsym n exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e nmtui, mode "default"
     bindsym c exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e python, mode "default"
     bindsym r exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e ranger, mode "default"
-    bindsym x exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e sudo protonvpn c,mode "default"
+    #bindsym x exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e sudo protonvpn c,mode "default"
+    bindsym j exec python -m notebook, mode "default"
     bindsym --release Shift+Return exec ~/dotfiles/scripts/drawterm, mode "default"
     bindsym Return exec urxvt, mode "default"
     bindsym Ctrl+Return exec st -f "Fira Mono:size=10", mode "default"
@@ -156,7 +159,6 @@ mode "launcher" {
 bindsym $mod+g mode "gog"
 mode "gog" {
     bindsym f exec ~/GOG\ Games/FTL\ Advanced\ Edition/start.sh, mode "default"
-    bindsym p exec ~/GOG\ Games/Prison\ Architect/start.sh, mode "default"
     bindsym m exec ~/GOG\ Games/Mini\ Metro/start.sh, mode "default"
     bindsym s exec ~/GOG\ Games/MOLEK\ SYNTEZ/start.sh, mode "default"
     bindsym l exec ~/GOG\ Games/Loop\ Hero/start.sh, mode "default"
