@@ -141,11 +141,11 @@ mode "launcher" {
     bindsym s exec steam, mode "default"; workspace $workspace7
     bindsym v exec vlc, mode "default"; workspace $workspace8
     bindsym p exec urxvt -name "floatingterm" -e alsamixer, mode "default"
-    bindsym e exec urxvt -geometry 70x20-0-30 -name "floatingterm", mode "default"
-    bindsym w exec urxvt -geometry 60x10-0-30 -name "floatingterm", mode "default"
-    bindsym n exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e nmtui, mode "default"
-    bindsym c exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e python, mode "default"
-    bindsym r exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e ranger, mode "default"
+    bindsym e exec urxvt -geometry 70x20-0-45 -name "floatingterm", mode "default"
+    bindsym w exec urxvt -geometry 60x10-0-45 -name "floatingterm", mode "default"
+    bindsym n exec urxvt -geometry 70x20-0-45 -name "floatingterm" -e nmtui, mode "default"
+    bindsym c exec urxvt -geometry 70x20-0-45 -name "floatingterm" -e python, mode "default"
+    bindsym r exec urxvt -geometry 70x20-0-45 -name "floatingterm" -e ranger, mode "default"
     #bindsym x exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e sudo protonvpn c,mode "default"
     bindsym j exec python -m notebook, mode "default"
     bindsym --release Shift+Return exec ~/dotfiles/scripts/drawterm, mode "default"
