@@ -62,6 +62,7 @@ gvim
 gzip
 hdf5
 htop
+i3-wm
 i3status
 inetutils
 inkscape
