@@ -23,6 +23,8 @@ DEFAULT_USER="matthew"
 alias please='sudo $(fc -ln -1)'
 alias e="exit"
 alias rm='rm -i'
+alias ll='ls -ltr'
+alias lh='ls -ltrh'
 alias neotidy="clear && echo && neofetch"
 alias dirs='dirs -v'
 
