@@ -111,4 +111,4 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 
 nnoremap <F3> :w<CR>:!git latexdiff HEAD~0 --no-view -o diff.pdf<CR>
 
-au BufNewFile,BufRead,BufReadPost *.qlua set syntax = lua
+au BufNewFile,BufRead,BufReadPost *.qlua set syntax=lua

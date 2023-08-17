@@ -38,13 +38,20 @@ alias gc="git checkout"
 
 alias klq="kinit -r 7d mblack@FNAL.GOV && ssh mblack@lq.fnal.gov"
 alias lq="ssh mblack@lq.fnal.gov"
+alias sshi="ssh -i ~/.ssh/mkb-root-key"
 alias omni="ssh mb962356@omni.zimt.uni-siegen.de"
 alias iodine="ssh -J black@login1.tp.nt.uni-siegen.de black@iodine.tp.nt.uni-siegen.de"
 alias bromine="ssh -J black@login1.tp.nt.uni-siegen.de black@bromine.tp.nt.uni-siegen.de"
+alias xenon="ssh -J black@login1.tp.nt.uni-siegen.de black@xenon.tp.nt.uni-siegen.de"
 alias rubidium="ssh -J black@login1.tp.nt.uni-siegen.de black@rubidium.tp.nt.uni-siegen.de"
 alias rbc="ssh mblack@qcdserver13.phys.columbia.edu"
+alias columbia="ssh mblack@cuth00.phys.columbia.edu"
 alias rhqrep="git clone mblack@cuth00.phys.columbia.edu:/home/witzel/RepositoryRHQ.git"
 alias tursa="ssh dc-blac1@tursa.dirac.ed.ac.uk"
+alias lumi="ssh -i .ssh/lumi-key blackmat@lumi.csc.fi"
+
+alias syncBsDs="rsync -av --exclude notes/ black@login1.tp.nt.uni-siegen.de:BstoDs ."
+alias pushBsDs="rsync -av notes black@login1.tp.nt.uni-siegen.de:BstoDs"
 
 alias /="cd /"
 alias ~="cd ~"
@@ -104,12 +111,12 @@ add-zsh-hook precmd vcs_info
 function () {
     local -a p_line p_elem rc_indicator
 
-    rc_indicator='%(0?.%F{014}%(!.#.)%F{default}.%F{167}%(!.#.)%F{default})'
+    rc_indicator='%(0?.%F{blue}%(!.#.)%F{default}.%F{9}%(!.#.)%F{default})'
 
     # first line
     p_elem+='%F{251}%n%F{251}'
     p_elem+=' '
-    p_elem+='%F{014}[%F{004}${PWD/#$HOME/~}%F{014}]'
+    p_elem+='%F{blue}[%F{blue}${PWD/#$HOME/~}%F{blue}]'
     p_line+=${(j::)p_elem}
 
     # second line
@@ -124,4 +131,4 @@ function () {
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=10
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=208
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=166
-for X in {command,alias}; do ZSH_HIGHLIGHT_STYLES[$X]=fg=2; done
+for X in {command,alias}; do ZSH_HIGHLIGHT_STYLES[$X]=fg=10; done
