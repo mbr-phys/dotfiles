@@ -9,7 +9,7 @@
 
 set $mod Mod4
 
-exec compton -b --xrender-sync --xrender-sync-fence
+exec picom -b --config ~/dotfiles/picom/.config/picom.conf --xrender-sync --xrender-sync-fence
 exec --no-startup-id dunst
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/jfo.jpg
