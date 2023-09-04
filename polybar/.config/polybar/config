@@ -189,7 +189,8 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-overline = #f37736
 
-click-left = exec urxvt -geometry 70x25-0-30 -name "floatingterm" -e ranger
+;click-left = exec urxvt -geometry 70x25-0-30 -name "floatingterm" -e ranger
+click-left = exec alacritty --class=alafloat1 --option "window.dimensions.lines=20" --option "window.dimensions.columns=70" --command="ranger"
 click-right = exec rofi -show drun
 
 [module/wlan]
@@ -198,7 +199,8 @@ exec = ~/dotfiles/scripts/wireless
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-overline = #ee4035
-click-left = exec urxvt -geometry 70x25-0-30 -name "floatingterm" -e nmtui
+;click-left = exec urxvt -geometry 70x25-0-30 -name "floatingterm" -e nmtui
+click-left = exec alacritty --class=alafloat1 --option "window.dimensions.lines=20" --option "window.dimensions.columns=70" --command="nmtui"
 
 [module/eth]
 type = internal/network
