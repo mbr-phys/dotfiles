@@ -17,6 +17,7 @@ nsnake
 oh-my-zsh-git
 otf-font-awesome-4
 package-query
+pdfmod
 pepper-flash
 pikaur
 polybar-git
@@ -24,15 +25,16 @@ powerline-console-fonts
 procmail
 python-fontawesome
 python-i3-py
-python2
 python39
 skypeforlinux-stable-bin
 slack-desktop
 ssmtp
 st
+tetris-terminal-git
 ttf-font-awesome-4
 udevil
 vundle
+webex-bin
 xflux
 xflux-gui-git
 xss-lock-git
