@@ -1,5 +1,5 @@
 #! /bin/bash
-setxkbmap gb
+setxkbmap us
 xset -b
 # xetxkbmap -option caps:escape
 [[ -f ~/Xresources ]] && xrdb -I$HOME ~/Xresources

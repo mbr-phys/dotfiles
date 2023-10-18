@@ -9,13 +9,16 @@
 
 set $mod Mod4
 
-exec picom -b --config ~/dotfiles/picom/.config/picom.conf --xrender-sync --xrender-sync-fence
+#set $critty MESA_LOADER_DRIVER_OVERRIDE=i965 alacritty
+set $critty alacritty
+
+#exec picom -b --config ~/dotfiles/picom/.config/picom.conf --xrender-sync --xrender-sync-fence
 exec --no-startup-id dunst
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/jfo.jpg
-exec_always --no-startup-id xflux -l 50.9 -g 8.0 -k 3600
+#exec_always --no-startup-id xflux -l 50.9 -g 8.0 -k 3600
 exec xss-lock ~/dotfiles/scripts/lock-diff
-exec ~/i3-restore/i3-restore --interval 10
+#exec ~/i3-restore/i3-restore --interval 10
 
 #--randomise on wallpaper to jig it up
 # GENERAL #######################
@@ -25,7 +28,7 @@ hide_edge_borders both
 floating_modifier $mod
 
 #bindsym $mod+Return exec urxvt 
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec $critty
 bindsym --release $mod+Shift+Return exec ~/dotfiles/scripts/drawterm
 bindsym $mod+q kill
 bindsym $mod+Shift+r restart
@@ -55,8 +58,10 @@ bindsym $mod+p mode "power"
 mode "power" {
     bindsym e       exit, mode "default"
     bindsym l       exec ~/dotfiles/scripts/lock-diff, mode "default"
-    bindsym shift+s exec "~/i3-restore/i3-save && systemctl poweroff"
-    bindsym r       exec "~/i3-restore/i3-save && systemctl reboot"
+    #bindsym shift+s exec "~/i3-restore/i3-save && systemctl poweroff"
+    #bindsym r       exec "~/i3-restore/i3-save && systemctl reboot"
+    bindsym shift+s exec systemctl poweroff
+    bindsym r       exec systemctl reboot
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -133,14 +138,14 @@ for_window [class="Spotify"] move to workspace $workspace6
 for_window [class="VLC"] move to workspace $workspace8
 
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+s exec env firefox; exec alacritty
+bindsym $mod+s exec env firefox; exec $critty
 
 bindsym $mod+a mode "launcher"
 mode "launcher" {
     bindsym f exec env firefox, mode "default"
     bindsym q exec qutebrowser, mode "default"
     bindsym z exec zoom, mode "default"
-    bindsym m exec ~/Mathematica/Install/Executables/Mathematica, mode "default"
+    bindsym m exec /usr/local/bin/mathematica, mode "default"
     bindsym s exec steam, mode "default"; workspace $workspace7
     bindsym v exec vlc, mode "default"; workspace $workspace8
     #bindsym p exec urxvt -name "floatingterm" -e alsamixer, mode "default"
@@ -149,16 +154,16 @@ mode "launcher" {
     #bindsym n exec urxvt -geometry 70x20-0-45 -name "floatingterm" -e nmtui, mode "default"
     #bindsym c exec urxvt -geometry 70x20-0-45 -name "floatingterm" -e python, mode "default"
     #bindsym r exec urxvt -geometry 70x20-0-45 -name "floatingterm" -e ranger, mode "default"
-    bindsym p exec alacritty --class="alafloat0" --option "window.dimensions.lines=20" --option "window.dimensions.columns=70" --command="alsamixer", mode "default"
-    bindsym e exec alacritty --class=alafloat1 --option "window.dimensions.lines=20" --option "window.dimensions.columns=70", mode "default"
-    bindsym n exec alacritty --class=alafloat1 --option "window.dimensions.lines=20" --option "window.dimensions.columns=70" --command="nmtui", mode "default"
-    bindsym c exec alacritty --class=alafloat1 --option "window.dimensions.lines=20" --option "window.dimensions.columns=70" --command="python", mode "default"
-    bindsym r exec alacritty --class=alafloat1 --option "window.dimensions.lines=20" --option "window.dimensions.columns=70" --command="ranger", mode "default"
-    bindsym w exec alacritty --class=alafloat2 --option "window.dimensions.lines=10" --option "window.dimensions.columns=60", mode "default"
+    bindsym p exec $critty --class=alafloat0 --option "window.dimensions.lines=20" --option "window.dimensions.columns=70" --command="alsamixer", mode "default"
+    bindsym e exec $critty --class=alafloat1 --option "window.dimensions.lines=20" --option "window.dimensions.columns=70", mode "default"
+    bindsym n exec $critty --class=alafloat1 --option "window.dimensions.lines=20" --option "window.dimensions.columns=70" --command="nmtui", mode "default"
+    bindsym c exec $critty --class=alafloat1 --option "window.dimensions.lines=20" --option "window.dimensions.columns=70" --command="python", mode "default"
+    bindsym r exec $critty --class=alafloat1 --option "window.dimensions.lines=20" --option "window.dimensions.columns=70" --command="ranger", mode "default"
+    bindsym w exec $critty --class=alafloat2 --option "window.dimensions.lines=10" --option "window.dimensions.columns=60", mode "default"
     #bindsym x exec urxvt -geometry 70x20-0-30 -name "floatingterm" -e sudo protonvpn c,mode "default"
     bindsym j exec python -m notebook, mode "default"
     bindsym --release Shift+Return exec ~/dotfiles/scripts/drawterm, mode "default"
-    bindsym Return exec alacritty, mode "default"
+    bindsym Return exec $critty, mode "default"
     bindsym Ctrl+Return exec st -f "Fira Mono:size=10", mode "default"
 
     bindsym Return mode "default"
@@ -166,8 +171,8 @@ mode "launcher" {
 }
 
 for_window [class="alafloat0"] floating enable
-for_window [class="alafloat1"] floating enable, move position 1350 645
-for_window [class="alafloat2"] floating enable, move position 1430 835
+for_window [class="alafloat1"] floating enable, move position 1350 805
+for_window [class="alafloat2"] floating enable, move position 1430 975
 
 bindsym $mod+g mode "gog"
 mode "gog" {
@@ -325,17 +330,19 @@ set $orange #d65d0e
 set $gray   #a89984
 set $fg     #f0f8ff
 
-
 set_from_resource $bg0 color0    #282828
 set_from_resource $bg1 color11   #373b41
 set_from_resource $red color1    #ee4035
 set_from_resource $blu color4    #0392cf
 set_from_resource $fg2 color7    #dcbf7a
-set_from_resource $fg1 color15   #333333
+#set_from_resource $fg1 color15   #333333
+
+set $fg1    #9c9595
+set_from_resource $tx1 color15   #333333
 
 # window colors
 #                       border  background  text    indicator
-client.focused          $fg1    $fg1        $fg1    $blu
+client.focused          $fg1    $fg1        $tx1    $blu
 client.unfocused        $bg0    $bg0        $fg1    $blu
 client.focused_inactive $fg2    $bg0        $fg1    $blu
 client.urgent $red $bg0 $fg1 $blu

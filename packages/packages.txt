@@ -58,7 +58,6 @@ google-glog
 gparted
 grep
 groff
-grub
 gsl
 gvim
 gzip

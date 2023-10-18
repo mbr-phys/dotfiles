@@ -14,8 +14,8 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
-source ~/.local/share/fonts/i_fa.sh
-source /home/matthew/gpt/lib/cgpt/build/source.sh
+#source ~/.local/share/fonts/i_fa.sh
+#source /home/matthew/gpt/lib/cgpt/build/source.sh
 
 EDITOR=vim
 DEFAULT_USER="matthew"
@@ -36,22 +36,26 @@ alias gcm="git commit -m"
 alias gp="git push"
 alias gc="git checkout"
 
+alias pyth="source ~/.local/pyenv/bin/activate"
+
 alias klq="kinit -r 7d mblack@FNAL.GOV && ssh mblack@lq.fnal.gov"
 alias lq="ssh mblack@lq.fnal.gov"
 alias sshi="ssh -i ~/.ssh/mkb-root-key"
 alias omni="ssh mb962356@omni.zimt.uni-siegen.de"
-alias iodine="ssh -J black@login1.tp.nt.uni-siegen.de black@iodine.tp.nt.uni-siegen.de"
-alias bromine="ssh -J black@login1.tp.nt.uni-siegen.de black@bromine.tp.nt.uni-siegen.de"
-alias xenon="ssh -J black@login1.tp.nt.uni-siegen.de black@xenon.tp.nt.uni-siegen.de"
-alias rubidium="ssh -J black@login1.tp.nt.uni-siegen.de black@rubidium.tp.nt.uni-siegen.de"
+alias iodine="ssh -J black@login2.tp.nt.uni-siegen.de black@iodine.tp.nt.uni-siegen.de"
+alias bromine="ssh -J black@login2.tp.nt.uni-siegen.de black@bromine.tp.nt.uni-siegen.de"
+alias xenon="ssh -J black@login2.tp.nt.uni-siegen.de black@xenon.tp.nt.uni-siegen.de"
+alias rubidium="ssh -J black@login2.tp.nt.uni-siegen.de black@rubidium.tp.nt.uni-siegen.de"
 alias rbc="ssh mblack@qcdserver13.phys.columbia.edu"
 alias columbia="ssh mblack@cuth00.phys.columbia.edu"
 alias rhqrep="git clone mblack@cuth00.phys.columbia.edu:/home/witzel/RepositoryRHQ.git"
 alias tursa="ssh dc-blac1@tursa.dirac.ed.ac.uk"
-alias lumi="ssh -i .ssh/lumi-key blackmat@lumi.csc.fi"
+alias lumi="ssh -i ~/.ssh/lumi-key blackmat@lumi.csc.fi"
 
-alias syncBsDs="rsync -av --exclude notes/ black@login1.tp.nt.uni-siegen.de:BstoDs ."
-alias pushBsDs="rsync -av notes black@login1.tp.nt.uni-siegen.de:BstoDs"
+alias syncBsDs="rsync -av --exclude notes/ black@login2.tp.nt.uni-siegen.de:BstoDs ."
+alias pushBsDs="rsync -av notes black@login2.tp.nt.uni-siegen.de:BstoDs"
+
+alias gsync="rsync -av -e 'ssh -J black@login2.tp.nt.uni-siegen.de' --exclude results/ black@rubidium.tp.nt.uni-siegen.de:/scratch/black/GradFlow/gradflow ."
 
 alias /="cd /"
 alias ~="cd ~"
@@ -87,6 +91,22 @@ alias pdflatexd="pdflatex -output-directory=./latex-output"
 
 function psc() {
     pass show -c $1
+}
+
+function zath() {
+    zathura $1 && exit
+}
+
+function xel() {
+    xelatex ${1}.tex && zathura ${1}.pdf
+}
+
+function sshJ1() {
+    ssh -J black@login1.tp.nt.uni-siegen.de black@${1}.tp.nt.uni-siegen.de
+}
+
+function sshJ2() {
+    ssh -J black@login2.tp.nt.uni-siegen.de black@${1}.tp.nt.uni-siegen.de
 }
 
 #this is mostly stolen then tweaked from a friend

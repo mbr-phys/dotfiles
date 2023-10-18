@@ -68,7 +68,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.8
+  opacity: 1.0
 
   # Startup Mode (changes require restart)
   #
@@ -124,7 +124,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: FuraMono Nerd Font
+    family: FiraMono Nerd Font
     #family: Fira Mono
 
     # The `style` can be specified to pick a specific face.
@@ -136,7 +136,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: FuraMono Nerd Font
+    family: FiraMono Nerd Font
     #family: Fira Mono
 
     # The `style` can be specified to pick a specific face.

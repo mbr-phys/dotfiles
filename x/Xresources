@@ -73,7 +73,7 @@ rofi.fuzzy: false
 rofi.yoffset: 0!-25
 
 URxvt.urlLauncher:              firefox
-URxvt.font:                     xft:FuraMono Nerd Font:size=10, xft:Meslo LG S for Powerline:size=10
+URxvt.font:                     xft:FiraMono Nerd Font:size=10, xft:Meslo LG S for Powerline:size=10
 URxvt.letterSpace:              -1
 URxvt*scrollTtyOutput:          false
 URxvt*scrollTtyKeypress:        true
