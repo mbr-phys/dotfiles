@@ -12,8 +12,8 @@ fi
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #source ~/.local/share/fonts/i_fa.sh
 #source /home/matthew/gpt/lib/cgpt/build/source.sh
 
@@ -40,7 +40,6 @@ alias pyth="source ~/.local/pyenv/bin/activate"
 
 alias klq="kinit -r 7d mblack@FNAL.GOV && ssh mblack@lq.fnal.gov"
 alias lq="ssh mblack@lq.fnal.gov"
-alias sshi="ssh -i ~/.ssh/mkb-root-key"
 alias omni="ssh mb962356@omni.zimt.uni-siegen.de"
 alias iodine="ssh -J black@login2.tp.nt.uni-siegen.de black@iodine.tp.nt.uni-siegen.de"
 alias bromine="ssh -J black@login2.tp.nt.uni-siegen.de black@bromine.tp.nt.uni-siegen.de"
@@ -71,7 +70,7 @@ alias hdm="cd ~/library/Siegen/2HDM/"
 alias higgs="cd ~/library/Siegen/2HDM/higgs-proj/"
 alias lat="cd ~/library/Siegen/LQCD/LatticeAnalyser/"
 alias qcd="cd ~/library/Siegen/LQCD/"
-alias gfr="cd ~/library/Siegen/LQCD/GFRenorm/"
+alias gfr="cd ~/library/Siegen/LQCD/gradflow/"
 alias quc="cd ~/library/Siegen/QuantumComputing/"
 alias tex="cd ~/library/Durham/TeX-Notes/Year\ 4/"
 alias lib="cd ~/library/"
@@ -94,7 +93,7 @@ function psc() {
 }
 
 function zath() {
-    zathura $1 && exit
+    zathura $@ && exit
 }
 
 function xel() {
@@ -107,6 +106,10 @@ function sshJ1() {
 
 function sshJ2() {
     ssh -J black@login2.tp.nt.uni-siegen.de black@${1}.tp.nt.uni-siegen.de
+}
+
+function sshi() {
+    ssh -i ~/.ssh/mkb-root-key root@${1}.tp.nt.uni-siegen.de
 }
 
 #this is mostly stolen then tweaked from a friend
