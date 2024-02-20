@@ -39,7 +39,7 @@ font-2 = Overpass:fontformat=truetype:size=10:antialias=false;0
 
 modules-left = bspwm i3
 modules-center = sep xwindow
-modules-right = volume disk wlan eth vpn xbacklight battery date1 date2
+modules-right = volume disk wlan eth vpn backlight battery date1 date2
 
 tray-position = right
 tray-padding = 2
@@ -169,9 +169,24 @@ format-overline = #f33ca8
 
 click-left = exec playerctl play-pause
 
+[module/backlight]
+type = custom/script
+interval = 0.2
+exec = ~/dotfiles/scripts/backlight.sh
+
+scroll-up = exec ~/dotfiles/scripts/bup.sh
+scroll-down = exec ~/dotfiles/scripts/bdo.sh
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-overline = #0392cf
+
+label = %output%%
+
 [module/xbacklight]
 type = internal/xbacklight
-card = intel_backlight
+;card = intel_backlight
+output = eDP-1
 
 enable-scroll = true
 
